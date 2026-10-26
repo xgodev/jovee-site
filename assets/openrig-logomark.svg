@@ -1,0 +1,51 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="100" x2="0" y2="924" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1C2433"/>
+      <stop offset="1" stop-color="#06080C"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="0" y1="100" x2="0" y2="924" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="0.18"/>
+      <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="arc" x1="300" y1="250" x2="720" y2="780" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#62C1FF"/>
+      <stop offset="0.5" stop-color="#22A7FF"/>
+      <stop offset="1" stop-color="#3C7DED"/>
+    </linearGradient>
+    <linearGradient id="knobRing" x1="300" y1="300" x2="724" y2="724" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F5F7FA"/>
+      <stop offset="0.5" stop-color="#BAC4D0"/>
+      <stop offset="1" stop-color="#5A6676"/>
+    </linearGradient>
+    <linearGradient id="knobCap" x1="0" y1="340" x2="0" y2="684" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2E3A4C"/>
+      <stop offset="1" stop-color="#10151C"/>
+    </linearGradient>
+    <filter id="tileShadow" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+    <filter id="arcGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Tile: macOS icon grid (824px squircle centred on a 1024px canvas). -->
+  <rect x="100" y="100" width="824" height="824" rx="186" fill="url(#bg)" filter="url(#tileShadow)"/>
+  <rect x="101.5" y="101.5" width="821" height="821" rx="184.5" stroke="url(#edge)" stroke-width="3"/>
+
+  <!-- Value scale: 270-degree track with the lit portion up to the pointer. -->
+  <path d="M 299.9 724.1 A 300 300 0 1 1 724.1 724.1" stroke="#1E2738" stroke-width="44" stroke-linecap="round"/>
+  <path d="M 299.9 724.1 A 300 300 0 1 1 793.9 409.4" stroke="url(#arc)" stroke-width="44" stroke-linecap="round" filter="url(#arcGlow)"/>
+
+  <!-- Knob. -->
+  <circle cx="512" cy="530" r="212" fill="#000000" opacity="0.35"/>
+  <circle cx="512" cy="512" r="210" fill="url(#knobRing)"/>
+  <circle cx="512" cy="512" r="178" fill="url(#knobCap)"/>
+  <circle cx="512" cy="512" r="177" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="2"/>
+  <line x1="624.8" y1="471.0" x2="676.4" y2="452.1" stroke="#F6F9FF" stroke-width="26" stroke-linecap="round"/>
+</svg>

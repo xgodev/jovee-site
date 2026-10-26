@@ -1,0 +1,11 @@
+/* Responsibility: the button styles shared by every section. */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 20px;border-radius:var(--r);border:1px solid transparent;font:600 14px/1 var(--body);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background .2s,border-color .2s,color .2s,transform .2s var(--ease)}
+.btn:active{transform:translateY(1px)}
+.btn-primary{background:var(--accent);color:var(--accent-ink)}
+.btn-primary:hover{background:#ff9d36}
+.btn-ghost{border-color:var(--field-line);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--ink-3)}
+.on-dark .btn-ghost{border-color:#ffffff40;color:#fff}
+.on-dark .btn-ghost:hover{border-color:#ffffffa0}
+.btn-love{color:#ff6b7d}
+.btn-sm{min-height:34px;padding:0 14px;font-size:12px}

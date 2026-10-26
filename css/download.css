@@ -1,0 +1,8 @@
+/* Responsibility: the closing download block with release info. */
+.dl{text-align:center}
+.dl .h2,.dl .lede{margin-left:auto;margin-right:auto}
+.dl-cta{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:28px}
+.dl-meta{margin:18px 0 0;font:500 13px/1.6 var(--mono);color:var(--page-fg-2)}
+.dl-links{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 18px;margin:10px 0 0;font-size:14.5px}
+.dl-links a{color:var(--page-h);text-decoration-color:var(--accent);text-underline-offset:3px}
+.dl-soon{display:inline-block;margin-top:22px;padding:7px 12px;border:1px dashed var(--field-line);border-radius:999px;font-size:13.5px;color:var(--page-fg-2)}
