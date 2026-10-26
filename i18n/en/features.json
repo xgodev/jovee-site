@@ -31,7 +31,6 @@
   "ai.h2": "Name a song and Claude builds the preset on your rig.",
   "ai.lede": "OpenRig speaks MCP, so Claude can look up the amp, cab and pedals used on the record, pick the closest gear in the catalog and save the preset while you keep playing.",
   "ai.installLabel": "Install in Claude Code",
-  "ai.skillsText": "Six skills in one plugin: <a href=\"https://github.com/jpfaria/OpenRig-claude\">see them on GitHub</a>.",
   "ai.c1.h3": "Tone Builder",
   "ai.c1.p": "Researches the chain used on a song, maps it to the catalog and saves it as a new preset.",
   "ai.c2.h3": "Plugin packager",
