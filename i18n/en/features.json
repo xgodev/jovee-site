@@ -33,7 +33,7 @@
   "ai.c1.h3": "Tone Builder",
   "ai.c1.p": "Researches the chain used on a song, maps it to the catalog and saves it as a new preset.",
   "ai.c2.h3": "Plugin packager",
-  "ai.c2.p": "Turns your .nam and IR files, or a tone3000.com pack, into an JoVee plugin with its manifest.",
+  "ai.c2.p": "Turns your .nam and IR files, or a tone3000.com pack, into a JoVee plugin with its manifest.",
   "ai.c3.h3": "MIDI Profile Builder",
   "ai.c3.p": "Writes the profile for your footswitch from a description or a MIDI capture.",
   "more.tag": "Also inside",
