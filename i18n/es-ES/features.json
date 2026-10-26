@@ -30,7 +30,6 @@
   "ai.tag": "Claude · MCP",
   "ai.h2": "Di el nombre de una canción y Claude arma el preset en tu rig.",
   "ai.lede": "JoVee habla MCP, así que Claude busca el ampli, la pantalla y los pedales usados en la grabación, elige el equipo más parecido del catálogo y guarda el preset mientras sigues tocando.",
-  "ai.installLabel": "Instala en Claude Code",
   "ai.c1.h3": "Tone Builder",
   "ai.c1.p": "Investiga la cadena usada en una canción, la traduce al catálogo y la guarda como preset nuevo.",
   "ai.c2.h3": "Empaquetador de plugins",
