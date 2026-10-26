@@ -5,17 +5,14 @@
   "nav.band": "Instrumentos",
   "nav.practice": "Práctica",
   "nav.claude": "Claude",
-  "nav.support": "Apoya",
   "nav.download": "Descargar",
-  "hero.chip": "Gratis · Código abierto · macOS",
-  "hero.h1": "Amplis, pantallas, pedales y capturas NAM en <em>una app gratuita</em> para tu Mac.",
+  "hero.chip": "macOS",
+  "hero.h1": "Amplis, pantallas, pedales y capturas NAM en <em>una sola app</em> para tu Mac.",
   "hero.lede": "Del Marshall 1959 SLP al Tube Screamer, más cualquier captura NAM o IR de TONE3000, sonando por la interfaz de audio que ya tienes.",
   "hero.cta1": "Descargar para macOS",
   "hero.cta2": "Ver la app",
-  "hero.cta3": "♥ Donar",
-  "hero.note": "Sin cuenta, sin suscripción, nada bloqueado tras un pago.",
   "hero.caption": "Un proyecto, tres cadenas: la guitarra solista repartida entre un Marshall y un AC30, la rítmica en un Twin Reverb y la acústica aparte.",
-  "footer.tagline": "Rig de guitarra gratuito y de código abierto para macOS.",
+  "footer.tagline": "Rig de guitarra para macOS.",
   "footer.learn.h4": "Aprende",
   "footer.learn.l1": "Primeros pasos",
   "footer.learn.l2": "Las pantallas",
@@ -30,6 +27,5 @@
   "footer.project.l2": "Versiones",
   "footer.project.l3": "Reportar un error",
   "footer.project.l4": "Contribuir",
-  "footer.project.l5": "Patrocinar",
-  "footer.copyright": "© 2026 JoVee · GPL-3.0"
+  "footer.copyright": "© 2026 JoVee"
 }

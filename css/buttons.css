@@ -7,5 +7,4 @@
 .btn-ghost:hover{border-color:var(--ink-3)}
 .on-dark .btn-ghost{border-color:#ffffff40;color:#fff}
 .on-dark .btn-ghost:hover{border-color:#ffffffa0}
-.btn-love{color:#ff6b7d}
 .btn-sm{min-height:34px;padding:0 14px;font-size:12px}
