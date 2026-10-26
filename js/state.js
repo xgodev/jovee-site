@@ -2,8 +2,8 @@
 // read back by i18n.js when it interpolates {version}, {downloads}.
 export const release = {
   version: '',
-  downloadUrl: 'https://github.com/jpfaria/OpenRig/releases',
-  changelogUrl: 'https://github.com/jpfaria/OpenRig/blob/develop/CHANGELOG.md',
+  downloadUrl: 'https://github.com/xgodev/jovee-site/releases',
+  changelogUrl: 'https://github.com/xgodev/jovee-site/releases',
   betaVersion: '',
   betaUrl: '',
   totalDownloads: 0,

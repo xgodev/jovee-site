@@ -2,7 +2,7 @@ import { release } from './state.js';
 
 // Version, download links and changelog are never hardcoded: pulled live from the
 // GitHub Releases API so the site always matches whatever was last published.
-const API = 'https://api.github.com/repos/jpfaria/OpenRig/releases';
+const API = 'https://api.github.com/repos/xgodev/jovee-site/releases';
 // Small counts read as unimpressive rather than reassuring — only show once it's a real number.
 const DOWNLOADS_DISPLAY_THRESHOLD = 1000;
 
