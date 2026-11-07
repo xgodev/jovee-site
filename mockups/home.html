@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JoVee — mockup da home</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0e1013;--bg-2:#15181d;--card:#1a1e24;--line:#ffffff14;--line-2:#ffffff24;
+  --ink:#f4f1ea;--ink-2:#b9bec7;--ink-3:#8a919c;
+  --jovee:#D9412B;--rig:#1F8FE5;--studio:#1FA37A;--jam:#E89A12;--tone:#7C5CE0;--lut:#B8693A;
+  --r:12px;--wrap:1200px;--gut:24px;--f:'Archivo',system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.55 var(--f);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gut)}
+
+/* header */
+.top{position:sticky;top:0;z-index:5;background:#0e1013e6;backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;height:64px;gap:32px}
+.brand{display:flex;align-items:center;gap:10px;font:900 22px/1 var(--f);letter-spacing:-.02em}
+.brand img{width:26px;height:28px}
+.nav{display:flex;gap:24px;font:500 15px/1 var(--f);color:var(--ink-2)}
+.nav a:hover{color:var(--ink)}
+.top .btn{margin-left:auto}
+
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 22px;border-radius:10px;font:600 15px/1 var(--f);cursor:pointer;transition:background .2s}
+.btn-rig{background:var(--rig);color:#fff}
+.btn-rig:hover{background:#3aa0ee}
+.btn-sm{min-height:38px;padding:0 16px;font-size:14px}
+.btn svg{width:18px;height:18px}
+
+/* hero */
+.hero{padding:88px 0 72px;background:radial-gradient(1000px 500px at 80% 0%,#1F8FE522,transparent 70%)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:56px;align-items:center}
+.eyebrow{display:flex;align-items:center;gap:10px;font:600 14px/1 var(--f);letter-spacing:.14em;text-transform:uppercase;color:var(--rig)}
+.eyebrow img{width:22px;height:24px}
+h1{margin:20px 0 20px;font:800 44px/1.12 var(--f);letter-spacing:-.02em}
+.lede{margin:0 0 32px;font-size:19px;color:var(--ink-2);max-width:34em}
+.meta{margin-top:14px;font-size:14px;color:var(--ink-3)}
+.shot{border-radius:var(--r);overflow:hidden;border:1px solid var(--line-2);box-shadow:0 40px 80px -30px #000c,0 0 0 1px #000}
+
+/* family */
+.sec{padding:96px 0;border-top:1px solid var(--line)}
+.h2{margin:0 0 12px;font:800 34px/1.15 var(--f);letter-spacing:-.015em}
+.sub{margin:0 0 40px;font-size:18px;color:var(--ink-2);max-width:40em}
+.family{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.app{display:flex;flex-direction:column;gap:14px;padding:24px;border-radius:var(--r);background:var(--card);border:1px solid var(--line)}
+.app .pk{width:36px;height:39px}
+.app b{font:700 20px/1.2 var(--f)}
+.app b span{font-weight:400;color:var(--c)}
+.app p{margin:0;font-size:15.5px;line-height:1.5;color:var(--ink-2);flex:1}
+.soon{align-self:flex-start;padding:6px 10px;border-radius:999px;border:1px solid var(--line-2);font:600 12px/1 var(--f);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+
+/* rig features */
+.feats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.feat figure{margin:0 0 16px;border-radius:10px;overflow:hidden;border:1px solid var(--line)}
+.feat figure img{aspect-ratio:16/10;object-fit:cover;object-position:top left;width:100%}
+.feat b{display:block;margin-bottom:6px;font:700 18px/1.3 var(--f)}
+.feat p{margin:0;font-size:15.5px;color:var(--ink-2)}
+
+/* final cta */
+.cta{text-align:center;padding:96px 0;border-top:1px solid var(--line);background:radial-gradient(700px 300px at 50% 100%,#1F8FE51f,transparent 70%)}
+.cta .h2{margin-bottom:24px}
+.foot{padding:32px 0;border-top:1px solid var(--line);font-size:14px;color:var(--ink-3)}
+.foot .wrap{display:flex;justify-content:space-between}
+</style>
+</head>
+<body>
+
+<header class="top"><div class="wrap">
+  <a class="brand" href="#"><img src="assets/jovee-symbol-cream.svg" alt="">JoVee</a>
+  <nav class="nav"><a href="#rig">Rig</a><a href="#apps">Studio</a><a href="#apps">Jam</a><a href="#apps">Tone</a><a href="#apps">Lut</a></nav>
+  <a class="btn btn-rig btn-sm" href="#baixar">Baixar o Rig</a>
+</div></header>
+
+<section class="hero" id="rig"><div class="wrap">
+  <div>
+    <div class="eyebrow"><img src="assets/jovee-rig-symbol.svg" alt="">JoVee Rig</div>
+    <h1>Um rig de amp, pedais e caixa para cada instrumento, todos tocando ao mesmo tempo na mesma interface.</h1>
+    <p class="lede">Carregue seus arquivos .nam e IR, afine, toque com metrônomo, bateria e looper, e troque de cena pela pedaleira MIDI.</p>
+    <a class="btn btn-rig" id="baixar" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>Baixar para macOS</a>
+    <div class="meta">Versão 0.9.0 · Apple Silicon e Intel</div>
+  </div>
+  <div class="shot"><img src="../assets/shots/chains.webp" alt="JoVee Rig com uma chain por instrumento"></div>
+</div></section>
+
+<section class="sec" id="recursos"><div class="wrap">
+  <h2 class="h2">O que vem no Rig</h2>
+  <p class="sub">Tudo no mesmo app, sem plugin para instalar à parte.</p>
+  <div class="feats">
+    <div class="feat"><figure><img src="../assets/shots/tuner.webp" alt=""></figure><b>Afinador em cada entrada</b><p>Cada guitarra tem o seu, e dá para afinar uma enquanto a outra toca.</p></div>
+    <div class="feat"><figure><img src="../assets/shots/drums.webp" alt=""></figure><b>Bateria e metrônomo</b><p>Escolha o kit e o groove, puxe uma virada e ensaie sem baterista.</p></div>
+    <div class="feat"><figure><img src="../assets/shots/mixer.webp" alt=""></figure><b>Mixer das chains</b><p>Volume, mute e solo de cada instrumento na mesma tela.</p></div>
+  </div>
+</div></section>
+
+<section class="sec" id="apps"><div class="wrap">
+  <h2 class="h2">A família JoVee</h2>
+  <p class="sub">Cada app faz uma coisa. O Rig já está disponível; os outros chegam em breve.</p>
+  <div class="family">
+    <div class="app" style="--c:var(--studio)"><img class="pk" src="assets/jovee-studio-symbol.svg" alt=""><b>JoVee <span>Studio</span></b><p>Grave, edite, mixe e finalize músicas em várias pistas, com o Rig dentro.</p><span class="soon">Em breve</span></div>
+    <div class="app" style="--c:var(--jam)"><img class="pk" src="assets/jovee-jam-symbol.svg" alt=""><b>JoVee <span>Jam</span></b><p>Toque junto com a música separada em stems, com tab, letra e partitura.</p><span class="soon">Em breve</span></div>
+    <div class="app" style="--c:var(--tone)"><img class="pk" src="assets/jovee-tone-symbol.svg" alt=""><b>JoVee <span>Tone</span></b><p>Recria o timbre de uma gravação por medição e configura o Rig, a M-VAVE e a Ampero II.</p><span class="soon">Em breve</span></div>
+    <div class="app" style="--c:var(--lut)"><img class="pk" src="assets/jovee-lut-symbol.svg" alt=""><b>JoVee <span>Lut</span></b><p>Regula a sua guitarra de ouvido, passo a passo, uma etapa de cada vez.</p><span class="soon">Em breve</span></div>
+  </div>
+</div></section>
+
+<section class="cta"><div class="wrap">
+  <h2 class="h2">Baixe o JoVee Rig e ligue a guitarra.</h2>
+  <a class="btn btn-rig" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>Baixar para macOS</a>
+</div></section>
+
+<footer class="foot"><div class="wrap"><span>© 2026 JoVee</span><span>Português · English · Español</span></div></footer>
+</body>
+</html>
