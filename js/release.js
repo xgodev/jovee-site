@@ -1,57 +1,43 @@
-import { release } from './state.js';
+// Responsibility: point the download buttons at the latest JoVee Rig installer for the visitor's system.
 
-// Version, download links and changelog are never hardcoded: pulled live from the
-// GitHub Releases API so the site always matches whatever was last published.
-const API = 'https://api.github.com/repos/xgodev/jovee-site/releases';
-// Small counts read as unimpressive rather than reassuring — only show once it's a real number.
-const DOWNLOADS_DISPLAY_THRESHOLD = 1000;
+// Installers are published on xgodev/jovee-release. Nothing is hardcoded: the
+// latest release is read live, and the releases page stays as the fallback.
+const API = 'https://api.github.com/repos/xgodev/jovee-release/releases/latest';
 
-function coreVersion(tag) { return (tag || '').replace(/^v/, '').split('-')[0].split('.').map(Number); }
-function isNewerCore(a, b) {
-  for (let i = 0; i < 3; i++) { const x = a[i] || 0, y = b[i] || 0; if (x !== y) return x > y; }
-  return false;
-}
+// Asset names come from jovee-release's release workflow.
+const PATTERNS = {
+  mac: /macos-universal\.dmg$/i,
+  windows: /windows-x64\.msi$/i,
+  'linux-x86_64': /linux-x86_64\.AppImage$/i,
+  'linux-aarch64': /linux-aarch64\.AppImage$/i,
+};
 
-function readReleases(list) {
-  const stable = list.find(rel => !rel.prerelease && !rel.draft);
-  const beta = list.find(rel => rel.prerelease && !rel.draft);
-  release.totalDownloads = list.reduce((sum, rel) => sum + (rel.assets || []).reduce((s, a) => s + (a.download_count || 0), 0), 0);
-  if (stable) {
-    const asset = (stable.assets || []).find(a => /macos/i.test(a.name));
-    release.version = (stable.tag_name || '').replace(/^v/, '');
-    release.downloadUrl = asset ? asset.browser_download_url : release.downloadUrl;
-    release.changelogUrl = stable.html_url || release.changelogUrl;
+async function detectSystem() {
+  const uad = navigator.userAgentData;
+  let platform = (uad && uad.platform) || navigator.platform || '';
+  const ua = navigator.userAgent || '';
+  if (/android|iphone|ipad/i.test(ua)) return null;
+  if (/mac/i.test(platform) || /mac os x/i.test(ua)) return 'mac';
+  if (/win/i.test(platform) || /windows/i.test(ua)) return 'windows';
+  if (/linux/i.test(platform) || /linux/i.test(ua)) {
+    let arch = '';
+    try {
+      if (uad && uad.getHighEntropyValues) arch = (await uad.getHighEntropyValues(['architecture'])).architecture || '';
+    } catch (e) { /* not exposed: read the user agent */ }
+    return /arm|aarch64/i.test(arch + ' ' + ua) ? 'linux-aarch64' : 'linux-x86_64';
   }
-  // Only surface the beta link when it's genuinely ahead of stable — a stale
-  // pre-release older than what's already shipped stays hidden.
-  if (beta && stable && isNewerCore(coreVersion(beta.tag_name), coreVersion(stable.tag_name))) {
-    const betaAsset = (beta.assets || []).find(a => /macos/i.test(a.name));
-    if (betaAsset) {
-      release.betaVersion = (beta.tag_name || '').replace(/^v/, '');
-      release.betaUrl = betaAsset.browser_download_url;
-    }
-  }
-}
-
-function paint() {
-  const btn = document.getElementById('dl-download-btn');
-  if (btn && release.downloadUrl) btn.href = release.downloadUrl;
-  const cl = document.getElementById('dl-changelog-link');
-  if (cl) cl.href = release.changelogUrl;
-  const dlCount = document.getElementById('dl-downloads');
-  if (dlCount && release.totalDownloads >= DOWNLOADS_DISPLAY_THRESHOLD) dlCount.style.display = '';
-  const betaWrap = document.getElementById('dl-beta');
-  const betaLink = document.getElementById('dl-beta-link');
-  if (betaWrap && betaLink && release.betaUrl) {
-    betaLink.href = release.betaUrl;
-    betaWrap.style.display = '';
-  }
+  return null;
 }
 
 export async function loadRelease() {
+  const system = await detectSystem();
+  if (!system) return;
   try {
     const r = await fetch(API);
-    if (r.ok) readReleases(await r.json());
-  } catch (e) { /* offline or rate-limited: keep the GitHub releases page as fallback */ }
-  paint();
+    if (!r.ok) return;
+    const rel = await r.json();
+    const asset = (rel.assets || []).find(a => PATTERNS[system].test(a.name));
+    if (!asset) return;
+    document.querySelectorAll('[data-download]').forEach(a => { a.href = asset.browser_download_url; });
+  } catch (e) { /* offline or rate-limited: the buttons keep the releases page */ }
 }

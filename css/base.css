@@ -1,8 +1,0 @@
-/* Responsibility: the document reset and the page container. */
-*,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:72px;-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--page);color:var(--page-fg);font:400 17px/1.55 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
-img,svg{display:block;max-width:100%}
-a{color:inherit}
-:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 var(--gut)}

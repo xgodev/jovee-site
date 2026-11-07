@@ -1,8 +1,0 @@
-/* Responsibility: the shared section headline, tag and lede typography. */
-.tag{display:inline-flex;align-items:center;gap:8px;margin:0 0 14px;font:600 12px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
-.tag::before{content:"";width:18px;height:2px;background:var(--accent)}
-.h2{margin:0;font:400 clamp(34px,4.6vw,58px)/1 var(--display);letter-spacing:.01em;color:var(--page-h);max-width:18em;text-wrap:balance}
-.h3{margin:0;font:400 clamp(26px,3vw,36px)/1.05 var(--display);letter-spacing:.01em;color:var(--page-h);max-width:18em;text-wrap:balance}
-.lede{margin:16px 0 0;max-width:60ch;font-size:clamp(17px,1.5vw,19px);line-height:1.55;color:var(--page-fg-2);text-wrap:pretty}
-.caption{margin:12px 0 0;font-size:14px;line-height:1.5;color:var(--page-fg-2)}
-.mono{font-family:var(--mono)}

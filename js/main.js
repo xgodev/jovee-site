@@ -1,17 +1,7 @@
-import { wireTheme } from './theme.js';
-import { wireShotTheme, syncShots } from './shot-theme.js';
-import { wireReveal } from './reveal.js';
-import { loadSections } from './sections.js';
-import { loadRelease } from './release.js';
-import { wireCaptureDemo } from './capture-demo.js';
+// Responsibility: start the page's scripts once it has loaded.
 import { detectLang, applyLang, wireLangSwitch } from './i18n.js';
+import { loadRelease } from './release.js';
 
-wireTheme();
-wireShotTheme();
-loadSections().then(() => {
-  wireReveal(document);
-  wireLangSwitch(document);
-  wireCaptureDemo(document);
-  syncShots(document);
-  loadRelease().then(() => applyLang(detectLang()));
-});
+wireLangSwitch();
+applyLang(detectLang());
+loadRelease();
