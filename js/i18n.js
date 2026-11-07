@@ -1,6 +1,6 @@
-// Responsibility: show the page in the visitor's language (English, Portuguese or Spanish).
+// Responsibility: show the page in the visitor's language (one of JoVee's nine languages).
 
-const LANGS = ['en', 'pt-BR', 'es-ES'];
+const LANGS = ['en', 'pt-BR', 'es-ES', 'fr-FR', 'de-DE', 'ja-JP', 'ko-KR', 'zh-CN', 'hi-IN'];
 const STORAGE_KEY = 'jovee-lang';
 
 export function detectLang() {
@@ -8,9 +8,8 @@ export function detectLang() {
   try { saved = localStorage.getItem(STORAGE_KEY); } catch (e) { /* storage blocked: use the browser language */ }
   if (LANGS.includes(saved)) return saved;
   const nl = (navigator.language || 'en').toLowerCase();
-  if (nl.startsWith('pt')) return 'pt-BR';
-  if (nl.startsWith('es')) return 'es-ES';
-  return 'en';
+  const hit = LANGS.find(l => nl.startsWith(l.slice(0, 2).toLowerCase()));
+  return hit || 'en';
 }
 
 export async function applyLang(lang) {
