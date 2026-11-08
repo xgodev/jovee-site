@@ -225,3 +225,5 @@ a.app{color:inherit;transition:box-shadow .2s}
 .step .soon{margin:0}
 .step .more{color:var(--c);font-weight:600;text-decoration:none}
 @media(max-width:860px){.step,.step:nth-child(even){grid-template-columns:1fr;gap:24px}.step:nth-child(even) .ph{order:0}.jhero h1{font-size:54px}.jhero{min-height:600px}}
+.ph{position:relative;display:block}
+.ph img.si{position:absolute;right:14px;bottom:14px;width:46%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:top left;border:1px solid #2e2e3a;border-radius:8px;box-shadow:0 18px 40px -10px rgba(0,0,0,.85)}
