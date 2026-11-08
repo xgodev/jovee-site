@@ -243,3 +243,4 @@ a.app{color:inherit;transition:box-shadow .2s}
 .gal img{width:100%;display:block}
 @media(max-width:860px){.how{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.gal{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:560px){.how{grid-template-columns:minmax(0,1fr)}}
+.gal figure:only-child{grid-column:1/-1}
