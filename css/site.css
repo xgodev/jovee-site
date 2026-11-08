@@ -2,7 +2,7 @@
 :root{
   --bg:#0e1013;--bg-2:#15181d;--card:#1a1e24;--line:#ffffff14;--line-2:#ffffff24;
   --ink:#f4f1ea;--ink-2:#b9bec7;--ink-3:#8a919c;
-  --jovee:#D9412B;--rig:#1F8FE5;--studio:#1FA37A;--jam:#E89A12;--tone:#7C5CE0;--lut:#B8693A;--live:#E5484D;
+  --jovee:#D9412B;--rig:#1F8FE5;--studio:#1FA37A;--jam:#E89A12;--tone:#7C5CE0;--lut:#B8693A;--live:#E5484D;--school:#E0A21F;
   --r:12px;--wrap:1200px;--gut:24px;--f:'Archivo',system-ui,sans-serif;
 }
 *{box-sizing:border-box}
