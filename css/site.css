@@ -201,3 +201,27 @@ a.app{color:inherit;transition:box-shadow .2s}
 @media (max-width:900px){.hero-portal h1{font-size:56px}.h1-app{font-size:40px}}
 @media (max-width:560px){.family-portal{grid-template-columns:minmax(0,1fr)}}
 .hero-portal .wrap{display:block}
+
+/* home: journey */
+.jhero{position:relative;min-height:760px;display:flex;align-items:flex-end;background:#040406 url(../assets/photos/band.webp) center/cover no-repeat}
+.jhero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,4,6,.35) 0%,rgba(4,4,6,.15) 40%,rgba(4,4,6,.92) 88%,#040406 100%)}
+.jhero .wrap{position:relative;padding-bottom:72px;display:block}
+.jhero h1{font-family:'Bebas Neue',sans-serif;font-size:84px;line-height:.95;margin:0 0 16px;max-width:780px;color:var(--ink)}
+.jhero p{font-size:21px;color:#c9c9d2;max-width:620px;margin:0 0 28px}
+.steps{padding:40px 0}
+.step{display:grid;grid-template-columns:1.25fr 1fr;gap:56px;align-items:center;padding:56px 0;border-top:1px solid #1a1a22}
+.step:nth-child(even){grid-template-columns:1fr 1.25fr}
+.step:nth-child(even) .ph{order:2}
+.ph{display:block;border-radius:14px;overflow:hidden;aspect-ratio:16/9;background:#0c0c10;box-shadow:0 30px 80px -30px rgba(0,0,0,.9)}
+.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.ph.shot{border:1px solid var(--line)}
+.ph.shot img{object-position:top left}
+.step .n{font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.14em;color:var(--c);text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.step .n img{width:26px;height:28px}
+.step h2{font-family:'Bebas Neue',sans-serif;font-size:52px;line-height:1;margin:0 0 14px;color:var(--ink)}
+.step p{font-size:18px;line-height:1.55;color:#b9b9c4;margin:0 0 22px;max-width:460px}
+.step .act{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.step .appn{font-weight:700;color:var(--ink);text-decoration:none}.step .appn span{color:var(--c)}
+.step .soon{margin:0}
+.step .more{color:var(--c);font-weight:600;text-decoration:none}
+@media(max-width:860px){.step,.step:nth-child(even){grid-template-columns:1fr;gap:24px}.step:nth-child(even) .ph{order:0}.jhero h1{font-size:54px}.jhero{min-height:600px}}

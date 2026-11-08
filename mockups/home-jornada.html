@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JoVee — jornada (mockup)</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Bebas+Neue&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/site.css">
+<style>
+.jhero{position:relative;min-height:760px;display:flex;align-items:flex-end;background:#040406 url(../assets/photos/band.webp) center/cover no-repeat}
+.jhero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,4,6,.35) 0%,rgba(4,4,6,.15) 40%,rgba(4,4,6,.92) 88%,#040406 100%)}
+.jhero .wrap{position:relative;padding-bottom:72px;display:block}
+.jhero h1{font-family:'Bebas Neue',sans-serif;font-size:84px;line-height:.95;margin:0 0 16px;max-width:780px;color:#f4f4f7}
+.jhero p{font-size:21px;color:#c9c9d2;max-width:620px;margin:0 0 28px}
+.steps{padding:40px 0 40px}
+.step{display:grid;grid-template-columns:1.25fr 1fr;gap:56px;align-items:center;padding:56px 0;border-top:1px solid #1a1a22}
+.step:nth-child(even){grid-template-columns:1fr 1.25fr}
+.step:nth-child(even) .ph{order:2}
+.ph{border-radius:14px;overflow:hidden;aspect-ratio:16/9;background:#0c0c10;box-shadow:0 30px 80px -30px rgba(0,0,0,.9)}
+.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.ph.shot{border:1px solid #272731;padding:0}
+.ph.shot img{object-fit:cover;object-position:top left}
+.n{font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.14em;color:var(--c);text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.n img{width:26px;height:28px}
+.step h2{font-family:'Bebas Neue',sans-serif;font-size:52px;line-height:1;margin:0 0 14px;color:#f4f4f7}
+.step p{font-size:18px;line-height:1.55;color:#b9b9c4;margin:0 0 22px;max-width:460px}
+.step .appn{font-weight:700;color:#f4f4f7}.step .appn span{color:var(--c)}
+.soon{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.14em;color:#8a8a96;border:1px solid #272731;border-radius:99px;padding:6px 12px;display:inline-block}
+.more{color:var(--c);font-weight:600;text-decoration:none;margin-left:14px}
+@media(max-width:860px){.step,.step:nth-child(even){grid-template-columns:1fr;gap:24px}.step:nth-child(even) .ph{order:0}.jhero h1{font-size:54px}.jhero{min-height:600px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="#"><img src="../assets/jovee-symbol-cream.svg" alt="">JoVee</a>
+  <nav class="nav"><a>Rig</a><a>Studio</a><a>Jam</a><a>Tone</a><a>Lut</a><a>Live</a><a>School</a></nav>
+  <a class="btn btn-rig btn-sm" href="#">Baixar</a>
+</div></header>
+
+<section class="jhero"><div class="wrap">
+  <h1>Tudo que você e a sua banda precisam.</h1>
+  <p>Do primeiro acorde ao ensaio, um app para cada momento de quem toca.</p>
+  <a class="btn btn-rig" href="#">Baixar o JoVee Rig grátis</a>
+</div></section>
+
+<section class="steps"><div class="wrap">
+  <div class="step" style="--c:#E0A21F"><div class="ph"><img src="../assets/photos/school.webp" alt=""></div><div>
+    <div class="n"><img src="../assets/jovee-school-symbol.svg" alt="">01 · Aprender</div>
+    <h2>Comece do zero e saiba quanto evoluiu.</h2>
+    <p>Um curso de guitarra do zero ao avançado em rock, blues e metal, que ouve você tocar para medir o seu progresso.</p>
+    <span class="appn">JoVee <span>School</span></span> &nbsp; <span class="soon">EM BREVE</span></div></div>
+
+  <div class="step" style="--c:#B8693A"><div class="ph"><img src="../assets/photos/lut.webp" alt=""></div><div>
+    <div class="n"><img src="../assets/jovee-lut-symbol.svg" alt="">02 · Regular</div>
+    <h2>Deixe a guitarra no ponto.</h2>
+    <p>Guia a regulagem da sua guitarra passo a passo, medindo cada corda pelo som.</p>
+    <span class="appn">JoVee <span>Lut</span></span> &nbsp; <span class="soon">EM BREVE</span></div></div>
+
+  <div class="step" style="--c:#1F8FE5"><div class="ph"><img src="../assets/photos/home.webp" alt=""></div><div>
+    <div class="n"><img src="../assets/jovee-rig-symbol.svg" alt="">03 · Montar o som</div>
+    <h2>Amps, caixas e pedais no seu computador.</h2>
+    <p>Monte o rig de cada instrumento com amps, caixas e pedais, na ordem que quiser.</p>
+    <a class="btn btn-rig btn-sm" href="#">Baixar o JoVee Rig</a><a class="more" href="#">Ver tudo que ele faz →</a></div></div>
+
+  <div class="step" style="--c:#7C5CE0"><div class="ph shot"><img src="../assets/apps/tone.webp" alt=""></div><div>
+    <div class="n"><img src="../assets/jovee-tone-symbol.svg" alt="">04 · Tirar o timbre</div>
+    <h2>O timbre da gravação, no seu rig.</h2>
+    <p>Recria o timbre de uma gravação por medição e configura no Rig.</p>
+    <span class="appn">JoVee <span>Tone</span></span> &nbsp; <span class="soon">EM BREVE</span></div></div>
+
+  <div class="step" style="--c:#E89A12"><div class="ph shot"><img src="../assets/shots/win-jam.webp" alt=""></div><div>
+    <div class="n"><img src="../assets/jovee-jam-symbol.svg" alt="">05 · Tocar junto</div>
+    <h2>Toque com a banda da música.</h2>
+    <p>Coloque uma música e toque junto com a banda, a tablatura e a letra.</p>
+    <span class="appn">JoVee <span>Jam</span></span> &nbsp; <span class="soon">EM BREVE</span></div></div>
+
+  <div class="step" style="--c:#1FA37A"><div class="ph"><img src="../assets/photos/studio.webp" alt=""></div><div>
+    <div class="n"><img src="../assets/jovee-studio-symbol.svg" alt="">06 · Gravar</div>
+    <h2>Grave a música inteira em casa.</h2>
+    <p>Grave, edite, mixe e finalize músicas em várias pistas, com o Rig dentro.</p>
+    <span class="appn">JoVee <span>Studio</span></span> &nbsp; <span class="soon">EM BREVE</span></div></div>
+
+  <div class="step" style="--c:#E5484D"><div class="ph shot"><img src="../assets/apps/live.webp" alt=""></div><div>
+    <div class="n"><img src="../assets/jovee-live-symbol.svg" alt="">07 · Tocar com a banda</div>
+    <h2>Ensaie com a banda, cada um na sua casa.</h2>
+    <p>Toque ao vivo pela internet com outros músicos, cada um no seu rig e com o seu próprio retorno.</p>
+    <span class="appn">JoVee <span>Live</span></span> &nbsp; <span class="soon">EM BREVE</span></div></div>
+</div></section>
+</body>
+</html>
