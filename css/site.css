@@ -183,3 +183,21 @@ h1{font:400 64px/1 var(--fh);letter-spacing:1.5px}
 .soon,.ver,.meta{font-family:var(--fm)}
 .langs button.on{border-color:var(--accent);color:var(--accent)}
 @media (max-width:900px){h1{font-size:48px}.h2{font-size:36px}}
+
+/* portal and app pages */
+.nav a.on{color:var(--ink)}
+.hero-portal{padding:96px 0 24px;text-align:center}
+.hero-portal h1{margin:0 auto;font-size:88px;max-width:12em}
+.sec-portal{border-top:0;padding-top:40px}
+.family-portal{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+a.app{color:inherit;transition:box-shadow .2s}
+.app .btn-sm{align-self:flex-start}
+.h1-app{font-size:52px;line-height:1.02}
+.hero-app .eyebrow{color:var(--c);text-shadow:0 0 10px color-mix(in srgb,var(--c) 60%,transparent)}
+.hero-app .wrap.solo{grid-template-columns:minmax(0,1fr)}
+.hero-app .wrap.solo .h1-app{max-width:18em}
+.hero-app .soon{display:inline-block;margin-top:8px}
+@media (max-width:1080px){.family-portal{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:900px){.hero-portal h1{font-size:56px}.h1-app{font-size:40px}}
+@media (max-width:560px){.family-portal{grid-template-columns:minmax(0,1fr)}}
+.hero-portal .wrap{display:block}
