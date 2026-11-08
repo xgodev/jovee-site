@@ -8,15 +8,12 @@ const API = 'https://api.github.com/repos/xgodev/jovee-release/releases/latest';
 const PATTERNS = {
   'mac-dmg': /macos-universal\.dmg$/i,
   'win-msi': /windows-x64\.msi$/i,
-  'win-zip': /windows-x64\.zip$/i,
   'x64-appimage': /linux-x86_64\.AppImage$/i,
   'x64-deb': /_amd64\.deb$/i,
   'x64-rpm': /\.x86_64\.rpm$/i,
-  'x64-tgz': /linux-x86_64\.tar\.gz$/i,
   'arm-appimage': /linux-aarch64\.AppImage$/i,
   'arm-deb': /_arm64\.deb$/i,
   'arm-rpm': /\.aarch64\.rpm$/i,
-  'arm-tgz': /linux-aarch64\.tar\.gz$/i,
 };
 
 export async function loadRelease() {
