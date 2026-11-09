@@ -244,9 +244,28 @@ a.app{color:inherit;transition:box-shadow .2s}
 @media(max-width:860px){.how{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.gal{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:560px){.how{grid-template-columns:minmax(0,1fr)}}
 .gal figure:only-child{grid-column:1/-1}
-.groups{columns:2;column-gap:48px;margin-top:40px}
-.grp{break-inside:avoid;margin:0 0 28px;padding-top:20px;border-top:1px solid var(--line)}
-.grp b{display:block;margin-bottom:10px;font:700 18px/1.25 var(--f);color:var(--c)}
-.grp ul{margin:0;padding-left:18px;font-size:15px;line-height:1.5;color:var(--ink-2)}
-.grp li{margin:0 0 6px}
-@media(max-width:860px){.groups{columns:1}}
+.fgs{margin-top:24px}
+.fg{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:56px;align-items:center;padding:64px 0;border-bottom:1px solid var(--line)}
+.fg:last-child{border-bottom:0;padding-bottom:0}
+.fg figure{margin:0;border:1px solid #272731;border-radius:12px;overflow:hidden;box-shadow:0 30px 80px -30px rgba(0,0,0,.9)}
+.fg figure img{width:100%;display:block}
+.fg-rev figure{order:2}
+.fg .hn{display:block;font:500 13px/1 'JetBrains Mono',monospace;color:var(--c);letter-spacing:.14em;margin-bottom:12px}
+.fg h3{margin:0 0 20px;font:400 36px/1.05 var(--fh);letter-spacing:1px;color:var(--ink)}
+.fg ul{list-style:none;margin:0;padding:0}
+.fg li{position:relative;padding:11px 0 11px 22px;border-top:1px solid var(--line);font-size:15.5px;line-height:1.45;color:var(--ink-2)}
+.fg li::before{content:"";position:absolute;left:2px;top:18px;width:8px;height:8px;border-radius:2px;background:var(--c);box-shadow:0 0 10px color-mix(in srgb,var(--c) 70%,transparent)}
+.fg-txt{grid-template-columns:minmax(0,1fr) minmax(0,2.2fr);align-items:start}
+.fg-txt .fg-b{display:contents}
+.fg-txt .hn{grid-column:1;grid-row:1}
+.fg-txt h3{grid-column:1;grid-row:1;margin-top:26px}
+.fg-txt ul{grid-column:2;grid-row:1;columns:2;column-gap:40px}
+.fg-txt li{break-inside:avoid}
+@media(max-width:860px){
+  .fg,.fg-txt{grid-template-columns:minmax(0,1fr);gap:24px;padding:44px 0}
+  .fg-rev figure{order:0}
+  .fg-txt .fg-b{display:block}
+  .fg-txt h3{margin-top:0}
+  .fg-txt ul{columns:1}
+  .fg h3{font-size:30px}
+}
