@@ -28,6 +28,10 @@ export async function applyLang(lang) {
     const v = dict[el.dataset.i18nAlt];
     if (v !== undefined) el.alt = v;
   });
+  document.querySelectorAll('[data-i18n-aria-label]').forEach(el => {
+    const v = dict[el.dataset.i18nAriaLabel];
+    if (v !== undefined) el.setAttribute('aria-label', v);
+  });
   document.querySelectorAll('[data-i18n-content]').forEach(el => {
     const v = dict[el.dataset.i18nContent];
     if (v !== undefined) el.content = v;
