@@ -275,3 +275,37 @@ a.app{color:inherit;transition:box-shadow .2s}
   .fg h3{font-size:30px}
   .fg figure.duo .si,.fg-rev figure.duo .si{right:8px;left:auto}
 }
+
+/* Motion: the hero rises on load, blocks enter as they scroll into view, screenshots drift over their photo. */
+@media (prefers-reduced-motion:no-preference){
+  @keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+  @keyframes settle{from{opacity:0;transform:scale(1.04)}to{opacity:1;transform:none}}
+  .jhero .wrap>*,.hero .wrap>div:first-child>*{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+  .jhero p,.hero .wrap>div:first-child>:nth-child(2){animation-delay:.12s}
+  .jhero .soon,.hero .wrap>div:first-child>:nth-child(n+3){animation-delay:.24s}
+  .hero .ph{animation:settle 1s cubic-bezier(.2,.7,.2,1) .15s both}
+
+  html.rv-on body{overflow-x:clip}
+  .rv{opacity:0;transition:opacity .7s cubic-bezier(.2,.7,.2,1) var(--d,0ms),transform .8s cubic-bezier(.2,.7,.2,1) var(--d,0ms)}
+  .rv-up{transform:translateY(32px)}
+  .rv-left{transform:translateX(-56px)}
+  .rv-right{transform:translateX(56px)}
+  .rv.in{opacity:1;transform:none}
+  .rv .si{opacity:0;scale:.9;transition:opacity .6s ease .35s,scale .7s cubic-bezier(.2,.7,.2,1) .35s}
+  .rv.in .si{opacity:1;scale:1}
+  .rv li{opacity:0;transform:translateX(14px);transition:opacity .5s ease,transform .5s cubic-bezier(.2,.7,.2,1)}
+  .rv.in li{opacity:1;transform:none}
+  .rv.in li:nth-child(2){transition-delay:.05s}.rv.in li:nth-child(3){transition-delay:.1s}.rv.in li:nth-child(4){transition-delay:.15s}
+  .rv.in li:nth-child(5){transition-delay:.2s}.rv.in li:nth-child(6){transition-delay:.25s}.rv.in li:nth-child(7){transition-delay:.3s}
+  .rv.in li:nth-child(8){transition-delay:.35s}.rv.in li:nth-child(9){transition-delay:.4s}.rv.in li:nth-child(n+10){transition-delay:.45s}
+
+  @supports (animation-timeline:view()){
+    @keyframes drift{from{translate:0 28px}to{translate:0 -28px}}
+    @keyframes pan{from{scale:1.12}to{scale:1}}
+    .step .ph .si,.fg figure.duo .si{animation:drift linear both;animation-timeline:view();animation-range:entry 0% exit 100%}
+    .step .ph>img:first-child{animation:pan linear both;animation-timeline:view();animation-range:entry 0% exit 100%}
+  }
+}
+@media (prefers-reduced-motion:no-preference) and (max-width:860px){
+  .rv-left,.rv-right{transform:translateY(32px)}
+}
