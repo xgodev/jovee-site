@@ -227,7 +227,7 @@ a.app{color:inherit;transition:box-shadow .2s}
 .step .more{color:var(--c);font-weight:600;text-decoration:none}
 @media(max-width:860px){.step,.step:nth-child(even){grid-template-columns:1fr;gap:24px}.step:nth-child(even) .ph{order:0}.jhero h1{font-size:54px}.jhero{min-height:600px}}
 .ph{position:relative;display:block}
-.ph img.si{position:absolute;right:14px;bottom:14px;width:46%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:top left;border:1px solid #2e2e3a;border-radius:8px;box-shadow:0 18px 40px -10px rgba(0,0,0,.85)}
+.ph .si{position:absolute;right:14px;bottom:14px;width:46%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:top left;border:1px solid #2e2e3a;border-radius:8px;box-shadow:0 18px 40px -10px rgba(0,0,0,.85)}
 .sec[style*="--c"] .kick{color:var(--c)}
 .hero-app .lede{margin:0 0 20px}
 .hero-app .ph{border-radius:14px;overflow:hidden;aspect-ratio:16/10;box-shadow:0 30px 80px -30px rgba(0,0,0,.9)}
@@ -251,6 +251,10 @@ a.app{color:inherit;transition:box-shadow .2s}
 .fg figure{margin:0;border:1px solid #272731;border-radius:12px;overflow:hidden;box-shadow:0 30px 80px -30px rgba(0,0,0,.9)}
 .fg figure img,.fg figure video{width:100%;display:block}
 .fg-rev figure{order:2}
+.fg figure.duo{position:relative;border:0;box-shadow:none;overflow:visible;padding-bottom:14%}
+.fg figure.duo>img:first-child{aspect-ratio:16/9;object-fit:cover;border-radius:12px;box-shadow:0 30px 80px -30px rgba(0,0,0,.9)}
+.fg figure.duo .si{position:absolute;right:-18px;bottom:0;width:58%;aspect-ratio:16/10;object-fit:cover;object-position:top left;border:1px solid #2e2e3a;border-radius:8px;box-shadow:0 18px 40px -10px rgba(0,0,0,.85)}
+.fg-rev figure.duo .si{right:auto;left:-18px}
 .fg .hn{display:block;font:500 13px/1 'JetBrains Mono',monospace;color:var(--c);letter-spacing:.14em;margin-bottom:12px}
 .fg h3{margin:0 0 20px;font:400 36px/1.05 var(--fh);letter-spacing:1px;color:var(--ink)}
 .fg ul{list-style:none;margin:0;padding:0}
@@ -269,4 +273,5 @@ a.app{color:inherit;transition:box-shadow .2s}
   .fg-txt h3{margin-top:0}
   .fg-txt ul{columns:1}
   .fg h3{font-size:30px}
+  .fg figure.duo .si,.fg-rev figure.duo .si{right:8px;left:auto}
 }
