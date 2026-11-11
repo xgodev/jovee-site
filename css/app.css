@@ -1,0 +1,79 @@
+/* Responsibility: the look of each app page (rig/, studio/, …), following DESIGN.md. Loaded after site.css. */
+body.app-page{
+  --night:#0e1013;--paper:#f4f1ea;--ink-d:#121418;--ink-d2:#3d424b;--ink-l:#f4f1ea;--ink-l2:#b9bec7;
+  --fb:'Barlow',system-ui,sans-serif;--edge:max(var(--gut),calc((100vw - var(--wrap))/2 + var(--gut)));
+  background:var(--night);color:var(--ink-l);font:400 20px/1.55 var(--fb);
+}
+.app-page a:focus-visible,.app-page button:focus-visible{outline:3px solid currentColor;outline-offset:4px;border-radius:6px}
+
+/* top bar, as on the home */
+.app-page .top{background:var(--night);backdrop-filter:none;border-bottom:0}
+.app-page .top .wrap{height:76px;gap:36px}
+.app-page .brand{font:900 24px/1 'Archivo',sans-serif}
+.app-page .nav{gap:28px;font:400 18px/1 var(--fb)}
+
+/* hero: the app's colour panel on one half, its photo full-bleed on the other */
+.app-page .hero{padding:0;background:none}
+.app-page .hero .wrap{max-width:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0;min-height:640px;align-items:stretch}
+.app-page .hero .wrap>div:first-child{background:var(--c);color:var(--ink-d);display:flex;flex-direction:column;justify-content:center;padding:96px 64px 96px var(--edge)}
+.app-page.side-r .hero .wrap>div:first-child{order:2;padding:96px var(--edge) 96px 64px}
+.app-page .hero .eyebrow{color:inherit;text-shadow:none;font:500 20px/1 var(--fb);letter-spacing:0;text-transform:none;gap:12px}
+.app-page .hero .eyebrow img{box-sizing:content-box;width:32px;height:35px;padding:7px;background:var(--ink-d);border-radius:12px}
+.app-page .hero .h1-app{margin:24px 0 20px;font:200 54px/1.1 var(--fb);letter-spacing:-.02em;color:inherit;max-width:13em}
+.app-page .hero .lede{margin:0;font-size:21px;color:inherit;max-width:30em}
+.app-page .hero .soon{display:none}
+.app-page .hero .ph{border-radius:0;aspect-ratio:auto;box-shadow:none;min-height:100%}
+.app-page .hero .ph>img:first-child{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.app-page .hero .ph .si{right:32px;bottom:32px;width:52%}
+.app-page.p-tone .hero .wrap>div:first-child{color:var(--ink-l)}
+
+/* headings: thin, as on the home */
+.app-page .h2{margin:0 0 20px;font:300 50px/1.1 var(--fb);letter-spacing:-.02em;max-width:22em}
+.app-page .fg h3{margin:0 0 20px;font:300 40px/1.12 var(--fb);letter-spacing:-.015em;color:inherit}
+
+/* how it works: light section, steps under a bar of the app's colour */
+.app-page #how{background:var(--paper);color:var(--ink-d);border-top:0;padding:112px 0}
+.app-page .how{gap:32px;margin-top:48px}
+.app-page .hw{border:0;border-top:4px solid var(--c);border-radius:0;background:none;padding:24px 0 0}
+.app-page .hw b{font:500 22px/1.3 var(--fb);color:var(--ink-d)}
+.app-page .hw p{color:var(--ink-d2)}
+
+/* what it does: dark header, then the features alternate light and dark, edge to edge */
+.app-page #features{border-top:0;padding:112px 0 0}
+.app-page .bigshot{border-color:#ffffff1f;box-shadow:0 30px 60px -20px #000a}
+.app-page .gal figure{border-color:#ffffff1f}
+.app-page .fgs{margin-top:56px}
+.app-page .fg{padding:112px 0;border-bottom:0;background:var(--night);box-shadow:0 0 0 100vmax var(--night);clip-path:inset(0 -100vmax)}
+.app-page .fg:nth-child(odd){background:var(--paper);box-shadow:0 0 0 100vmax var(--paper);color:var(--ink-d)}
+.app-page .fg:last-child{padding-bottom:112px}
+.app-page .fg figure{border-color:#ffffff1f;box-shadow:0 30px 60px -20px #000a}
+.app-page .fg:nth-child(odd) figure{border-color:#0000001a;box-shadow:0 24px 48px -24px #0006}
+.app-page .fg figure.duo{border:0;box-shadow:none}
+.app-page .fg figure.duo>img:first-child{box-shadow:none;border-bottom:8px solid var(--c)}
+.app-page .fg li{font-size:20px;color:var(--ink-l2)}
+.app-page .fg:nth-child(odd) li{color:var(--ink-d2)}
+.app-page .fg .more-n{border-color:currentColor;color:inherit;font:500 16px/1 var(--fb)}
+
+/* family: light row of the other apps */
+.app-page #apps{background:var(--paper);color:var(--ink-d);border-top:0;padding:96px 0}
+.app-page .app b{font:500 20px/1.2 var(--fb);color:var(--ink-d)}
+.app-page .app b span{color:var(--ink-d);font-weight:500;text-shadow:none}
+.app-page .app:hover b{text-decoration:underline;text-underline-offset:4px}
+
+/* footer */
+.app-page .foot{padding:56px 0;border-top:0;font-size:18px;color:var(--ink-l2)}
+.app-page .foot .yt{color:var(--ink-l)}
+
+@media (max-width:860px){
+  body.app-page{font-size:19px}
+  .app-page .hero .wrap{grid-template-columns:minmax(0,1fr);min-height:0}
+  .app-page .hero .wrap>div:first-child,.app-page.side-r .hero .wrap>div:first-child{order:0;padding:56px var(--gut)}
+  .app-page .hero .ph{min-height:340px}
+  .app-page .hero .ph .si{right:16px;bottom:16px}
+  .app-page .hero .h1-app{font-size:38px}
+  .app-page .h2{font-size:36px}
+  .app-page .fg h3{font-size:32px}
+  .app-page #how,.app-page #features{padding-top:72px}
+  .app-page #how{padding-bottom:72px}
+  .app-page .fg,.app-page .fg:last-child{padding:64px 0}
+}

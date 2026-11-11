@@ -4,7 +4,7 @@ body.home{
   --fb:'Barlow',system-ui,sans-serif;
   background:var(--night);color:var(--ink-l);font:400 20px/1.55 var(--fb);
 }
-.home a:focus-visible,.home select:focus-visible{outline:3px solid currentColor;outline-offset:4px;border-radius:6px}
+.home a:focus-visible{outline:3px solid currentColor;outline-offset:4px;border-radius:6px}
 
 /* top bar */
 .home .top{background:var(--night);backdrop-filter:none;border-bottom:0}
@@ -76,7 +76,6 @@ body.home{
 .home .foot{padding:56px 0;border-top:1px solid #ffffff14;font-size:18px;color:var(--ink-l2)}
 .home .foot .wrap{justify-content:flex-start;gap:32px;flex-wrap:wrap}
 .home .foot .yt{color:var(--ink-l);font-size:18px}
-.home .foot select{margin-left:auto;background:var(--night);color:var(--ink-l);border:1px solid #ffffff3d;border-radius:999px;padding:10px 18px;font:400 16px var(--fb)}
 
 @media (max-width:1100px){
   .h-tiles{grid-template-columns:repeat(4,minmax(0,1fr))}
@@ -98,5 +97,4 @@ body.home{
   .h-ed .wrap{gap:56px}
   .h-ed .fig .ov{right:-8px;bottom:-24px}
   .home .foot .wrap{flex-direction:row;align-items:center}
-  .home .foot select{margin-left:0}
 }
