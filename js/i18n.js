@@ -7,9 +7,9 @@ export function detectLang() {
   let saved = null;
   try { saved = localStorage.getItem(STORAGE_KEY); } catch (e) { /* storage blocked: use the browser language */ }
   if (LANGS.includes(saved)) return saved;
+  // The browser's language when JoVee has it, English otherwise (owner, 2026-11-11).
   const nl = (navigator.language || 'en').toLowerCase();
-  const hit = LANGS.find(l => nl.startsWith(l.slice(0, 2).toLowerCase()));
-  return hit || 'en';
+  return LANGS.find(l => nl.startsWith(l.slice(0, 2).toLowerCase())) || 'en';
 }
 
 export async function applyLang(lang) {
@@ -37,10 +37,15 @@ export async function applyLang(lang) {
     if (v !== undefined) el.content = v;
   });
   document.querySelectorAll('[data-lang-switch] button').forEach(b => b.classList.toggle('on', b.dataset.lang === lang));
-  document.querySelectorAll('select[data-lang-select]').forEach(s => { s.value = lang; });
+  document.querySelectorAll('[data-lang-switch]').forEach(sw => {
+    const on = sw.querySelector(`button[data-lang="${lang}"]`);
+    const cur = sw.querySelector('[data-lang-cur]');
+    if (on && cur) cur.textContent = on.textContent;
+    sw.open = false;
+  });
 }
 
 export function wireLangSwitch() {
   document.querySelectorAll('[data-lang-switch] button').forEach(b => b.addEventListener('click', () => applyLang(b.dataset.lang)));
-  document.querySelectorAll('select[data-lang-select]').forEach(s => s.addEventListener('change', () => applyLang(s.value)));
+  document.addEventListener('click', e => document.querySelectorAll('details[data-lang-switch][open]').forEach(d => { if (!d.contains(e.target)) d.open = false; }));
 }

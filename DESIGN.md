@@ -41,6 +41,8 @@ Large light headings as on moises.ai's hero.
 - Radius: 16px for Splice-type containers and tiles, 999px for pills. No shadows except the floating app screen (one: `0 30px 60px -20px #000a`).
 
 ## Components
-- Top bar: wordmark + app links only. No YouTube button there (owner, 2026-11-11: "horrível"); YouTube lives in the footer.
+- Top bar: wordmark + app links + language menu (globe icon and the current language, menu below) on the right. No YouTube button there (owner, 2026-11-11: "horrível"); YouTube lives in the footer.
+- Language: the visitor's own pick (saved) first, then the browser's language when JoVee has it, English otherwise (owner, 2026-11-11).
+- Review renders and screenshots sent to the owner are taken in English (owner, 2026-11-11).
 - Pill button: 52px high, Barlow 600 18px; dark pill on colour/paper, paper pill on dark.
 - Imagery: `assets/photos/*.webp` for people, `assets/loops/*.mp4` (poster `.jpg`) for app screens, `assets/jovee-*-symbol.svg` for icons. No third-party or gear brand names.

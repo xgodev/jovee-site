@@ -326,3 +326,15 @@ a.app{color:inherit;transition:box-shadow .2s}
 .app b{font-size:20px}
 .fg li{padding-left:0}
 .fg li::before{display:none}
+
+/* language: globe in the top bar, menu under it (owner, 2026-11-11) */
+.lang{position:relative;margin-left:auto}
+.lang summary{display:flex;align-items:center;gap:8px;list-style:none;cursor:pointer;padding:8px 14px;border:1px solid #ffffff2e;border-radius:999px;font:400 16px/1 'Barlow',system-ui,sans-serif;color:#f4f1ea}
+.lang summary::-webkit-details-marker{display:none}
+.lang summary svg{width:20px;height:20px}
+.lang summary:hover{border-color:#ffffff66}
+.lang-m{position:absolute;right:0;top:calc(100% + 8px);min-width:180px;padding:8px;background:#1a1e24;border:1px solid #ffffff1f;border-radius:16px;box-shadow:0 20px 40px -12px #000c;display:grid;z-index:10}
+.lang-m button{text-align:left;background:none;border:0;border-radius:10px;padding:10px 12px;color:#b9bec7;font:400 17px/1.2 'Barlow',system-ui,sans-serif;cursor:pointer}
+.lang-m button:hover,.lang-m button.on{background:#ffffff12;color:#f4f1ea}
+.lang summary:focus-visible,.lang-m button:focus-visible{outline:3px solid currentColor;outline-offset:2px}
+@media (max-width:860px){.lang summary span{display:none}.lang summary{padding:10px}}
