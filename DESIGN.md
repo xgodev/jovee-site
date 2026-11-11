@@ -26,6 +26,7 @@ Rejected as references: teenage.engineering (one product, no family), fender.com
 | `--ink-d` | #121418 | text on paper and on colour panels |
 | `--ink-d2` | #3d424b | body text on paper/panels |
 | `--ink-l` | #f4f1ea / `--ink-l2` #b9bec7 | text on dark |
+| `--drums` #D9468F, `--backing` #12A8B8, `--metronome` #7FB52A, `--tuner` #8A96A8 | | free utilities, one colour each (owner chose this over one shared colour, 2026-11-11) |
 | `--rig` #1F8FE5, `--studio` #1FA37A, `--jam` #E89A12, `--tone` #7C5CE0, `--lut` #B8693A, `--live` #E5484D, `--school` #E0A21F | | panel fill of that product's block only |
 
 ## Type
@@ -46,3 +47,6 @@ Large light headings as on moises.ai's hero.
 - Review renders and screenshots sent to the owner are taken in English (owner, 2026-11-11).
 - Pill button: 52px high, Barlow 600 18px; dark pill on colour/paper, paper pill on dark.
 - Imagery: `assets/photos/*.webp` for people, `assets/loops/*.mp4` (poster `.jpg`) for app screens, `assets/jovee-*-symbol.svg` for icons. No third-party or gear brand names.
+
+## Free utilities
+Drums, backing tracks, metronome and tuner are free apps of their own (owner, 2026-11-11), not features of a paid app. Each has a pick symbol (`assets/jovee-{drums,backing,metronome,tuner}-symbol.svg`) in its own colour, and they are listed in the home's Utilities section, on paper, one card each.
