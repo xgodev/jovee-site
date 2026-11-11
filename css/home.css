@@ -98,3 +98,18 @@ body.home{
   .h-ed .fig .ov{right:-8px;bottom:-24px}
   .home .foot .wrap{flex-direction:row;align-items:center}
 }
+
+/* free utilities: light section, one card per utility with its own colour */
+.h-utils{background:var(--paper);color:var(--ink-d);padding:112px 0}
+.h-utils h2{margin:0 0 20px;font:300 54px/1.1 var(--fb);letter-spacing:-.02em}
+.h-utils .h-lead{margin:0 0 48px;color:var(--ink-d2);max-width:34em}
+.h-ugrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.h-util{background:#fff;border-radius:16px;padding:32px 28px;border-top:6px solid var(--c);display:flex;flex-direction:column;gap:12px}
+.h-util img{width:56px;height:60px}
+.h-util b{font:500 22px/1.2 var(--fb)}
+.h-util p{margin:0;color:var(--ink-d2);flex:1}
+.h-tags{display:flex;gap:8px;flex-wrap:wrap}
+.h-tags span{font:500 16px/1 var(--fb);padding:8px 14px;border-radius:999px;border:1px solid #12141833}
+.h-tags span:first-child{background:var(--ink-d);color:var(--ink-l);border-color:var(--ink-d)}
+@media (max-width:1100px){.h-ugrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:820px){.h-utils{padding:72px 0}.h-utils h2{font-size:38px}.h-ugrid{grid-template-columns:1fr}}
