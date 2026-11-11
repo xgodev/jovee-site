@@ -309,3 +309,20 @@ a.app{color:inherit;transition:box-shadow .2s}
 @media (prefers-reduced-motion:no-preference) and (max-width:860px){
   .rv-left,.rv-right{transform:translateY(32px)}
 }
+
+/* Declutter: one message per block, details on demand */
+.fg .hn,.hw .hn,.sec .kick,.step .soon,.app .soon,.app p,.app figure,.app .btn-sm{display:none}
+.step .n .num{display:none}
+.fg li{border-top:0;padding:7px 0 7px 22px}
+.fg li::before{top:17px;width:6px;height:6px;border-radius:50%;box-shadow:none}
+.fg ul:not(.open) li:nth-child(n+4){display:none}
+.fg-txt ul{columns:1}
+.fg .more-n{margin-top:12px;padding:6px 14px;border-radius:999px;border:1px solid var(--line-2);background:none;color:var(--c,var(--ink-2));font:600 15px/1 var(--fm);cursor:pointer}
+.fg .more-n:hover{border-color:var(--c,var(--ink-2))}
+.family{grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px}
+.app,.app-body{padding:0;background:none;border:0;box-shadow:none}
+.app:hover{box-shadow:none}
+.app-body{flex-direction:row;align-items:center;gap:12px;padding:14px 4px}
+.app b{font-size:20px}
+.fg li{padding-left:0}
+.fg li::before{display:none}
