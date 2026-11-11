@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JoVee — Tudo que você e a sua banda precisam</title>
+<meta name="description" content="Do primeiro acorde ao ensaio, um app para cada momento de quem toca.">
+<link rel="icon" href="../assets/jovee-symbol.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@900&family=Barlow:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+/* Mockup of the home, following DESIGN.md. */
+:root{
+  --night:#0e1013;--paper:#f4f1ea;--ink-d:#121418;--ink-d2:#3d424b;--ink-l:#f4f1ea;--ink-l2:#b9bec7;
+  --rig:#1F8FE5;--studio:#1FA37A;--jam:#E89A12;--tone:#7C5CE0;--lut:#B8693A;--live:#E5484D;--school:#E0A21F;
+  --wrap:1200px;--gut:24px;--f:'Barlow',system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--night);color:var(--ink-l);font:400 20px/1.55 var(--f);-webkit-font-smoothing:antialiased}
+img,video{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+a:focus-visible{outline:3px solid currentColor;outline-offset:4px;border-radius:6px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gut)}
+
+/* top bar */
+.top{position:sticky;top:0;z-index:5;background:var(--night)}
+.top .wrap{display:flex;align-items:center;gap:36px;height:76px}
+.brand{display:flex;align-items:center;gap:10px;font:900 24px/1 'Archivo',sans-serif;letter-spacing:-.02em}
+.brand img{width:28px;height:30px}
+.nav{display:flex;gap:28px;font:400 18px/1 var(--f);color:var(--ink-l2)}
+.nav a:hover{color:var(--ink-l)}
+.pill{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;font:500 18px/1 var(--f);white-space:nowrap}
+.pill-dark{background:var(--ink-d);color:var(--ink-l)}
+.pill-light{background:var(--paper);color:var(--ink-d)}
+.top .pill{margin-left:auto;min-height:44px;padding:0 20px;font-size:16px}
+.pill svg{width:20px;height:20px}
+
+/* hero: full-bleed photo, headline on it */
+.hero{position:relative;min-height:680px;display:flex;align-items:flex-end;overflow:hidden}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#0e101326 0%,#0e1013b3 50%,#0e1013f2 100%)}
+.hero .wrap{position:relative;z-index:1;width:100%;padding-bottom:80px}
+.hero h1{margin:0 0 20px;font:200 88px/1.02 var(--f);letter-spacing:-.025em;max-width:13em}
+.hero p{margin:0;font-size:24px;color:var(--ink-l);max-width:30em}
+
+/* family tiles */
+.fam{background:var(--paper);color:var(--ink-d);padding:112px 0}
+.fam h2,.ed h2,.split h2,.panel h2{margin:0 0 20px;font:300 54px/1.1 var(--f);letter-spacing:-.02em}
+.fam .lead{margin:0 0 48px;color:var(--ink-d2);max-width:34em}
+.tiles{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:16px}
+.tile .ph{aspect-ratio:3/4;border-radius:16px;overflow:hidden;border-bottom:6px solid var(--c)}
+.tile .ph img{width:100%;height:100%;object-fit:cover}
+.tile .nm{display:flex;align-items:center;gap:8px;margin-top:14px;font:500 19px/1.2 var(--f)}
+.tile .nm img{width:24px;height:26px}
+.tile .st{margin-top:4px;font-size:18px;color:var(--ink-d2)}
+
+/* product label */
+.lbl{display:flex;align-items:center;gap:12px;margin-bottom:24px;font:500 20px/1 var(--f)}
+.lbl img{width:32px;height:35px}
+.pane .lbl img{box-sizing:content-box;padding:7px;background:var(--ink-d);border-radius:12px}
+.on-c{color:var(--ink-l)!important}.on-c p{color:var(--ink-l)!important}
+.hero .pill{margin-top:32px}
+.copy p{margin:0 0 16px;max-width:30em}
+.copy .pill{margin-top:16px}
+
+/* split: colour panel + full-bleed photo (yousician) */
+.split{display:grid;grid-template-columns:1fr 1fr;min-height:640px;color:var(--ink-d)}
+.split .pane{background:var(--c);display:flex;align-items:center;padding:96px max(var(--gut),calc((100vw - var(--wrap))/2 + var(--gut)))}
+.split.rev .pane{order:2}
+.split .pane p{color:var(--ink-d)}
+.split .photo{position:relative}
+.split .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.split .copy{max-width:540px}
+
+/* panel + screen on dark (splice) */
+.dark{background:var(--night);padding:112px 0}
+.panel{display:grid;grid-template-columns:5fr 7fr;border-radius:16px;overflow:hidden;background:#1a1e24;min-height:560px}
+.panel .pane{background:var(--c);color:var(--ink-d);padding:64px 56px;display:flex;align-items:center}
+.panel .scr{display:flex;align-items:center;justify-content:center;padding:48px}
+.panel .scr video,.panel .scr img{width:100%;border-radius:10px;box-shadow:0 30px 60px -20px #000a;border:1px solid #ffffff1f}
+.panel.rev{grid-template-columns:7fr 5fr}
+.panel.rev .pane{order:2}
+
+/* light editorial (yousician white sections) */
+.ed{background:var(--paper);color:var(--ink-d);padding:120px 0}
+.ed .wrap{display:grid;grid-template-columns:5fr 7fr;gap:72px;align-items:center}
+.ed.rev .copy{order:2}
+.ed .copy p{color:var(--ink-d2)}
+.ed .fig{position:relative}
+.ed .fig .bg{border-radius:16px;aspect-ratio:4/3;object-fit:cover;width:100%;border-bottom:8px solid var(--c)}
+.ed .fig .ov{position:absolute;right:-24px;bottom:-40px;width:58%;border-radius:10px;box-shadow:0 30px 60px -20px #000a}
+
+/* footer */
+.foot{padding:56px 0;border-top:1px solid #ffffff14;font-size:18px;color:var(--ink-l2)}
+.foot .wrap{display:flex;align-items:center;gap:32px;flex-wrap:wrap}
+.foot .yt{display:flex;align-items:center;gap:8px;color:var(--ink-l)}
+.foot .yt svg{width:22px;height:22px;color:#ff3b30}
+.foot select{margin-left:auto;background:var(--night);color:var(--ink-l);border:1px solid #ffffff3d;border-radius:999px;padding:10px 18px;font:400 16px var(--f)}
+
+@media (max-width:1100px){
+  .tiles{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .nav{display:none}
+}
+@media (max-width:820px){
+  body{font-size:19px}
+  .hero{min-height:560px}
+  .hero h1{font-size:52px}
+  .hero p{font-size:20px}
+  .fam h2,.ed h2,.split h2,.panel h2{font-size:38px}
+  .tiles{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 calc(-1 * var(--gut));padding:0 var(--gut) 8px}
+  .tile{flex:0 0 150px;scroll-snap-align:start}
+  .split,.panel,.panel.rev,.ed .wrap{grid-template-columns:1fr}
+  .split .photo{min-height:360px}
+  .split.rev .pane,.panel.rev .pane,.ed.rev .copy{order:0}
+  .split .pane{padding:64px var(--gut)}
+  .panel .pane{padding:48px 24px}
+  .panel .scr{padding:24px}
+  .ed .wrap{gap:56px}
+  .ed .fig .ov{right:-8px;bottom:-24px}
+  .top .pill span{display:none}
+  .foot select{margin-left:0}
+}
+</style>
+</head>
+<body>
+
+<header class="top"><div class="wrap">
+  <a class="brand" href="#"><img src="../assets/jovee-symbol-cream.svg" alt="">JoVee</a>
+  <nav class="nav" aria-label="Apps"><a href="#rig">Rig</a><a href="#studio">Studio</a><a href="#jam">Jam</a><a href="#tone">Tone</a><a href="#lut">Lut</a><a href="#live">Live</a><a href="#school">School</a></nav>
+</div></header>
+
+<section class="hero">
+  <img src="../assets/photos/band.webp" alt="Banda ensaiando num estúdio caseiro">
+  <div class="wrap">
+    <h1>Tudo que você e a sua banda precisam.</h1>
+    <p>Do primeiro acorde ao ensaio, um app para cada momento de quem toca.</p>
+    <a class="pill pill-light" href="../rig/">Baixar o JoVee Rig</a>
+  </div>
+</section>
+
+<section class="fam"><div class="wrap">
+  <h2>A família JoVee</h2>
+  <p class="lead">Cada app faz uma coisa. O Rig já está disponível; os outros chegam em breve.</p>
+  <div class="tiles">
+    <a class="tile" href="#school" style="--c:var(--school)"><div class="ph"><img src="../assets/photos/school.webp" alt=""></div><div class="nm"><img src="../assets/jovee-school-symbol.svg" alt="">School</div><div class="st">Aprender</div></a>
+    <a class="tile" href="#lut" style="--c:var(--lut)"><div class="ph"><img src="../assets/photos/lut.webp" alt=""></div><div class="nm"><img src="../assets/jovee-lut-symbol.svg" alt="">Lut</div><div class="st">Regular</div></a>
+    <a class="tile" href="#rig" style="--c:var(--rig)"><div class="ph"><img src="../assets/photos/rig.webp" alt=""></div><div class="nm"><img src="../assets/jovee-rig-symbol.svg" alt="">Rig</div><div class="st">Montar o som</div></a>
+    <a class="tile" href="#tone" style="--c:var(--tone)"><div class="ph"><img src="../assets/photos/tone.webp" alt=""></div><div class="nm"><img src="../assets/jovee-tone-symbol.svg" alt="">Tone</div><div class="st">Tirar o timbre</div></a>
+    <a class="tile" href="#jam" style="--c:var(--jam)"><div class="ph"><img src="../assets/photos/jam.webp" alt=""></div><div class="nm"><img src="../assets/jovee-jam-symbol.svg" alt="">Jam</div><div class="st">Tocar junto</div></a>
+    <a class="tile" href="#studio" style="--c:var(--studio)"><div class="ph"><img src="../assets/photos/studio.webp" alt=""></div><div class="nm"><img src="../assets/jovee-studio-symbol.svg" alt="">Studio</div><div class="st">Gravar</div></a>
+    <a class="tile" href="#live" style="--c:var(--live)"><div class="ph"><img src="../assets/photos/live.webp" alt=""></div><div class="nm"><img src="../assets/jovee-live-symbol.svg" alt="">Live</div><div class="st">Tocar com a banda</div></a>
+  </div>
+</div></section>
+
+<!-- School: split, panel left -->
+<section class="split" id="school" style="--c:var(--school)">
+  <div class="pane"><div class="copy">
+    <div class="lbl"><img src="../assets/jovee-school-symbol.svg" alt="">JoVee School</div>
+    <h2>Aulas ao vivo com o seu professor, gravadas.</h2>
+    <p>Contrate aulas com o seu professor; a aula acontece dentro do app, com o JoVee Live, cada um no seu rig.</p>
+    <p>Cada aula fica gravada no app, com a tablatura e as backing tracks, para rever quando quiser.</p>
+    <a class="pill pill-dark" href="../school/">Ver tudo que ele faz →</a>
+  </div></div>
+  <div class="photo"><img src="../assets/photos/school-lesson.webp" alt="Professora dando aula de guitarra pelo computador"></div>
+</section>
+
+<!-- Rig: panel + screen on dark -->
+<section class="dark" id="rig"><div class="wrap">
+  <div class="panel" style="--c:var(--rig)">
+    <div class="pane"><div class="copy">
+      <div class="lbl"><img src="../assets/jovee-rig-symbol.svg" alt="">JoVee Rig</div>
+      <h2>Amps, caixas e pedais no seu computador.</h2>
+      <p>Monte o rig de cada instrumento com amps, caixas e pedais, na ordem que quiser.</p>
+      <a class="pill pill-dark" href="../rig/">Ver tudo que ele faz →</a>
+    </div></div>
+    <div class="scr"><video src="../assets/loops/rig-hero.mp4" poster="../assets/loops/rig-hero.jpg" autoplay muted loop playsinline aria-label="Tela do JoVee Rig"></video></div>
+  </div>
+</div></section>
+
+<!-- Lut: light editorial -->
+<section class="ed" id="lut" style="--c:var(--lut)"><div class="wrap">
+  <div class="copy">
+    <div class="lbl"><img src="../assets/jovee-lut-symbol.svg" alt="">JoVee Lut</div>
+    <h2>Deixe a guitarra no ponto.</h2>
+    <p>Guia a regulagem da sua guitarra passo a passo, medindo cada corda pelo som.</p>
+    <a class="pill pill-dark" href="../lut/">Ver tudo que ele faz →</a>
+  </div>
+  <div class="fig"><img class="bg" src="../assets/photos/lut.webp" alt="Mãos regulando a ponte de uma guitarra"><video class="ov" src="../assets/loops/lut-main.mp4" poster="../assets/loops/lut-main.jpg" autoplay muted loop playsinline aria-label="Tela do JoVee Lut"></video></div>
+</div></section>
+
+<!-- Tone: split, panel right -->
+<section class="split rev on-c" id="tone" style="--c:var(--tone)">
+  <div class="pane"><div class="copy">
+    <div class="lbl"><img src="../assets/jovee-tone-symbol.svg" alt="">JoVee Tone</div>
+    <h2>O timbre da gravação, no seu rig.</h2>
+    <p>Recria o timbre de uma gravação por medição e configura no Rig.</p>
+    <a class="pill pill-light" href="../tone/">Ver tudo que ele faz →</a>
+  </div></div>
+  <div class="photo"><img src="../assets/photos/tone.webp" alt="Guitarrista ouvindo uma gravação no estúdio de casa"></div>
+</section>
+
+<!-- Jam: light editorial, reversed -->
+<section class="ed rev" id="jam" style="--c:var(--jam)"><div class="wrap">
+  <div class="copy">
+    <div class="lbl"><img src="../assets/jovee-jam-symbol.svg" alt="">JoVee Jam</div>
+    <h2>Toque com a banda da música.</h2>
+    <p>Coloque uma música e toque junto com a banda, a tablatura e a letra.</p>
+    <a class="pill pill-dark" href="../jam/">Ver tudo que ele faz →</a>
+  </div>
+  <div class="fig"><img class="bg" src="../assets/photos/jam.webp" alt="Guitarrista tocando junto com uma música no quarto"><video class="ov" src="../assets/loops/jam-tab.mp4" poster="../assets/loops/jam-tab.jpg" autoplay muted loop playsinline aria-label="Tela do JoVee Jam com a tablatura"></video></div>
+</div></section>
+
+<!-- Studio: split, panel left -->
+<section class="split" id="studio" style="--c:var(--studio)">
+  <div class="pane"><div class="copy">
+    <div class="lbl"><img src="../assets/jovee-studio-symbol.svg" alt="">JoVee Studio</div>
+    <h2>Grave a música inteira em casa.</h2>
+    <p>Grave, edite, mixe e finalize músicas em várias pistas, com o Rig dentro.</p>
+    <a class="pill pill-dark" href="../studio/">Ver tudo que ele faz →</a>
+  </div></div>
+  <div class="photo"><img src="../assets/photos/studio.webp" alt="Cantora gravando voz em casa"></div>
+</section>
+
+<!-- Live: panel + screen on dark, reversed -->
+<section class="dark" id="live"><div class="wrap">
+  <div class="panel rev" style="--c:var(--live)">
+    <div class="pane"><div class="copy">
+      <div class="lbl"><img src="../assets/jovee-live-symbol.svg" alt="">JoVee Live</div>
+      <h2>Ensaie com a banda, cada um na sua casa.</h2>
+      <p>Toque ao vivo pela internet com outros músicos, cada um no seu rig e com o seu próprio retorno.</p>
+      <a class="pill pill-dark" href="../live/">Ver tudo que ele faz →</a>
+    </div></div>
+    <div class="scr"><img src="../assets/apps/live.webp" alt="Tela do JoVee Live"></div>
+  </div>
+</div></section>
+
+<footer class="foot"><div class="wrap">
+  <span>© 2026 JoVee</span>
+  <a class="yt" href="https://www.youtube.com/@jovee.studio" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg>Nosso canal no YouTube</a>
+  <select aria-label="Idioma"><option>English</option><option selected>Português</option><option>Español</option><option>Français</option><option>Deutsch</option><option>日本語</option><option>한국어</option><option>中文</option><option>हिन्दी</option></select>
+</div></footer>
+</body>
+</html>

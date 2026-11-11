@@ -8,64 +8,118 @@
 <link rel="icon" href="assets/jovee-symbol.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;900&family=Barlow:wght@400;500;600;700&family=Bebas+Neue&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;900&family=Barlow:wght@200;300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/home.css">
 <script type="module" src="js/main.js"></script>
-<script type="module" src="js/more.js"></script>
 </head>
-<body>
+<body class="home">
 
 <header class="top"><div class="wrap">
   <a class="brand" href="./"><img src="assets/jovee-symbol-cream.svg" alt="">JoVee</a>
   <nav class="nav"><a href="rig/">Rig</a><a href="studio/">Studio</a><a href="jam/">Jam</a><a href="tone/">Tone</a><a href="lut/">Lut</a><a href="live/">Live</a><a href="school/">School</a></nav>
 </div></header>
 
-<section class="jhero"><div class="wrap">
-  <h1 data-i18n="hero.h1">Everything you and your band need.</h1>
-  <p data-i18n="portal.sub">From the first chord to rehearsal, one app for every moment of playing.</p>
-  <span data-i18n="fam.soon" class="soon">Coming soon</span>
+<section class="h-hero">
+  <img src="assets/photos/band.webp" alt="">
+  <div class="wrap">
+    <h1 data-i18n="hero.h1">Everything you and your band need.</h1>
+    <p data-i18n="portal.sub">From the first chord to rehearsal, one app for every moment of playing.</p>
+    <a class="h-pill h-pill-light" href="rig/" data-i18n="hero.btn">Download JoVee Rig</a>
+  </div>
+</section>
+
+<section class="h-fam"><div class="wrap">
+  <h2 data-i18n="fam.h2">The JoVee family</h2>
+  <p class="h-lead" data-i18n="fam.sub">Each app does one thing. Rig is available now; the others are coming soon.</p>
+  <div class="h-tiles">
+    <a class="h-tile" href="#school" style="--c:var(--school)"><div class="ph"><img src="assets/photos/school.webp" alt="" loading="lazy"></div><div class="nm"><img src="assets/jovee-school-symbol.svg" alt="">School</div><div class="st" data-i18n="step.school.n">Learn</div></a>
+    <a class="h-tile" href="#lut" style="--c:var(--lut)"><div class="ph"><img src="assets/photos/lut.webp" alt="" loading="lazy"></div><div class="nm"><img src="assets/jovee-lut-symbol.svg" alt="">Lut</div><div class="st" data-i18n="step.lut.n">Set up</div></a>
+    <a class="h-tile" href="#rig" style="--c:var(--rig)"><div class="ph"><img src="assets/photos/rig.webp" alt="" loading="lazy"></div><div class="nm"><img src="assets/jovee-rig-symbol.svg" alt="">Rig</div><div class="st" data-i18n="step.rig.n">Build your sound</div></a>
+    <a class="h-tile" href="#tone" style="--c:var(--tone)"><div class="ph"><img src="assets/photos/tone.webp" alt="" loading="lazy"></div><div class="nm"><img src="assets/jovee-tone-symbol.svg" alt="">Tone</div><div class="st" data-i18n="step.tone.n">Get the tone</div></a>
+    <a class="h-tile" href="#jam" style="--c:var(--jam)"><div class="ph"><img src="assets/photos/jam.webp" alt="" loading="lazy"></div><div class="nm"><img src="assets/jovee-jam-symbol.svg" alt="">Jam</div><div class="st" data-i18n="step.jam.n">Play along</div></a>
+    <a class="h-tile" href="#studio" style="--c:var(--studio)"><div class="ph"><img src="assets/photos/studio.webp" alt="" loading="lazy"></div><div class="nm"><img src="assets/jovee-studio-symbol.svg" alt="">Studio</div><div class="st" data-i18n="step.studio.n">Record</div></a>
+    <a class="h-tile" href="#live" style="--c:var(--live)"><div class="ph"><img src="assets/photos/live.webp" alt="" loading="lazy"></div><div class="nm"><img src="assets/jovee-live-symbol.svg" alt="">Live</div><div class="st" data-i18n="step.live.n">Play with the band</div></a>
+  </div>
 </div></section>
 
-<section class="steps"><div class="wrap">
-  <div class="step" style="--c:var(--school)"><a class="ph" href="school/"><img src="assets/photos/school.webp" alt="" loading="lazy"><img class="si" src="assets/apps/school.webp" alt="" loading="lazy"></a><div>
-    <div class="n"><img src="assets/jovee-school-symbol.svg" alt=""><span class="num">01 · </span><span data-i18n="step.school.n">Learn</span></div>
-    <h2 data-i18n="step.school.h">Start from zero and see how far you have come.</h2>
-    <p data-i18n="fam.school">An electric guitar course from zero to advanced in rock, blues and metal, that listens to you play to measure your progress.</p>
-    <div class="act"><a class="appn" href="school/">JoVee <span>School</span></a><span data-i18n="fam.soon" class="soon">Coming soon</span></div></div></div>
-  <div class="step" style="--c:var(--lut)"><a class="ph" href="lut/"><img src="assets/photos/lut.webp" alt="" loading="lazy"><img class="si" src="assets/apps/lut.webp" alt="" loading="lazy"></a><div>
-    <div class="n"><img src="assets/jovee-lut-symbol.svg" alt=""><span class="num">02 · </span><span data-i18n="step.lut.n">Set up</span></div>
+<section class="h-split" id="school" style="--c:var(--school)">
+  <div class="h-pane"><div class="h-copy">
+    <div class="h-lbl"><img src="assets/jovee-school-symbol.svg" alt="">JoVee School</div>
+    <h2 data-i18n="ap.school.g4.t">Live lessons with your teacher, recorded</h2>
+    <p data-i18n="ap.school.g4.i1">Book lessons with your teacher; the class happens inside the app, with JoVee Live, each one on their own rig</p>
+    <p data-i18n="ap.school.g4.i4">Every class stays recorded in the app, with the tab and the backing tracks, to watch again whenever you want</p>
+    <a class="h-pill h-pill-dark" href="school/" data-i18n="step.rig.more">See everything it does →</a>
+  </div></div>
+  <div class="photo"><img src="assets/photos/school-lesson.webp" alt="" loading="lazy"></div>
+</section>
+
+<section class="h-dark" id="rig"><div class="wrap">
+  <div class="h-panel" style="--c:var(--rig)">
+    <div class="h-pane"><div class="h-copy">
+      <div class="h-lbl"><img src="assets/jovee-rig-symbol.svg" alt="">JoVee Rig</div>
+      <h2 data-i18n="step.rig.h">Amps, cabs and pedals on your computer.</h2>
+      <p data-i18n="fam.rig">Build each instrument's rig with amps, cabs and pedals, in any order you want.</p>
+      <a class="h-pill h-pill-dark" href="rig/" data-i18n="step.rig.more">See everything it does →</a>
+    </div></div>
+    <div class="scr"><video src="assets/loops/rig-hero.mp4" poster="assets/loops/rig-hero.jpg" autoplay muted loop playsinline aria-hidden="true"></video></div>
+  </div>
+</div></section>
+
+<section class="h-ed" id="lut" style="--c:var(--lut)"><div class="wrap">
+  <div class="h-copy">
+    <div class="h-lbl"><img src="assets/jovee-lut-symbol.svg" alt="">JoVee Lut</div>
     <h2 data-i18n="step.lut.h">Get your guitar playing right.</h2>
     <p data-i18n="fam.lut">Guides your guitar setup step by step, measuring each string by its sound.</p>
-    <div class="act"><a class="appn" href="lut/">JoVee <span>Lut</span></a><span data-i18n="fam.soon" class="soon">Coming soon</span></div></div></div>
-  <div class="step" style="--c:var(--rig)"><a class="ph" href="rig/"><img src="assets/photos/home.webp" alt="" loading="lazy"><img class="si" src="assets/shots/chains.webp" alt="" loading="lazy"></a><div>
-    <div class="n"><img src="assets/jovee-rig-symbol.svg" alt=""><span class="num">03 · </span><span data-i18n="step.rig.n">Build your sound</span></div>
-    <h2 data-i18n="step.rig.h">Amps, cabs and pedals on your computer.</h2>
-    <p data-i18n="fam.rig">Build each instrument's rig with amps, cabs and pedals, in any order you want.</p>
-    <div class="act"><span data-i18n="fam.soon" class="soon">Coming soon</span><a class="more" href="rig/" data-i18n="step.rig.more">See everything it does →</a></div></div></div>
-  <div class="step" style="--c:var(--tone)"><a class="ph" href="tone/"><img src="assets/photos/tone.webp" alt="" loading="lazy"><img class="si" src="assets/apps/tone.webp" alt="" loading="lazy"></a><div>
-    <div class="n"><img src="assets/jovee-tone-symbol.svg" alt=""><span class="num">04 · </span><span data-i18n="step.tone.n">Get the tone</span></div>
+    <a class="h-pill h-pill-dark" href="lut/" data-i18n="step.rig.more">See everything it does →</a>
+  </div>
+  <div class="fig"><img class="bg" src="assets/photos/lut.webp" alt="" loading="lazy"><video class="ov" src="assets/loops/lut-main.mp4" poster="assets/loops/lut-main.jpg" autoplay muted loop playsinline aria-hidden="true"></video></div>
+</div></section>
+
+<section class="h-split rev on-c" id="tone" style="--c:var(--tone)">
+  <div class="h-pane"><div class="h-copy">
+    <div class="h-lbl"><img src="assets/jovee-tone-symbol.svg" alt="">JoVee Tone</div>
     <h2 data-i18n="step.tone.h">The recording's tone, on your rig.</h2>
     <p data-i18n="fam.tone">Recreates a recording's tone by measuring it and sets it up on Rig.</p>
-    <div class="act"><a class="appn" href="tone/">JoVee <span>Tone</span></a><span data-i18n="fam.soon" class="soon">Coming soon</span></div></div></div>
-  <div class="step" style="--c:var(--jam)"><a class="ph" href="jam/"><img src="assets/photos/jam.webp" alt="" loading="lazy"><img class="si" src="assets/shots/win-jam.webp" alt="" loading="lazy"></a><div>
-    <div class="n"><img src="assets/jovee-jam-symbol.svg" alt=""><span class="num">05 · </span><span data-i18n="step.jam.n">Play along</span></div>
+    <a class="h-pill h-pill-light" href="tone/" data-i18n="step.rig.more">See everything it does →</a>
+  </div></div>
+  <div class="photo"><img src="assets/photos/tone.webp" alt="" loading="lazy"></div>
+</section>
+
+<section class="h-ed rev" id="jam" style="--c:var(--jam)"><div class="wrap">
+  <div class="h-copy">
+    <div class="h-lbl"><img src="assets/jovee-jam-symbol.svg" alt="">JoVee Jam</div>
     <h2 data-i18n="step.jam.h">Play with the song's band.</h2>
     <p data-i18n="fam.jam">Add a song and play along with the band, the tab and the lyrics.</p>
-    <div class="act"><a class="appn" href="jam/">JoVee <span>Jam</span></a><span data-i18n="fam.soon" class="soon">Coming soon</span></div></div></div>
-  <div class="step" style="--c:var(--studio)"><a class="ph" href="studio/"><img src="assets/photos/studio.webp" alt="" loading="lazy"><img class="si" src="assets/apps/studio.webp" alt="" loading="lazy"></a><div>
-    <div class="n"><img src="assets/jovee-studio-symbol.svg" alt=""><span class="num">06 · </span><span data-i18n="step.studio.n">Record</span></div>
+    <a class="h-pill h-pill-dark" href="jam/" data-i18n="step.rig.more">See everything it does →</a>
+  </div>
+  <div class="fig"><img class="bg" src="assets/photos/jam.webp" alt="" loading="lazy"><video class="ov" src="assets/loops/jam-tab.mp4" poster="assets/loops/jam-tab.jpg" autoplay muted loop playsinline aria-hidden="true"></video></div>
+</div></section>
+
+<section class="h-split" id="studio" style="--c:var(--studio)">
+  <div class="h-pane"><div class="h-copy">
+    <div class="h-lbl"><img src="assets/jovee-studio-symbol.svg" alt="">JoVee Studio</div>
     <h2 data-i18n="step.studio.h">Record the whole song at home.</h2>
     <p data-i18n="fam.studio">Record, edit, mix and finish songs across multiple tracks, with Rig inside.</p>
-    <div class="act"><a class="appn" href="studio/">JoVee <span>Studio</span></a><span data-i18n="fam.soon" class="soon">Coming soon</span></div></div></div>
-  <div class="step" style="--c:var(--live)"><a class="ph" href="live/"><img src="assets/photos/live.webp" alt="" loading="lazy"><img class="si" src="assets/apps/live.webp" alt="" loading="lazy"></a><div>
-    <div class="n"><img src="assets/jovee-live-symbol.svg" alt=""><span class="num">07 · </span><span data-i18n="step.live.n">Play with the band</span></div>
-    <h2 data-i18n="step.live.h">Rehearse with your band, each at home.</h2>
-    <p data-i18n="fam.live">Play live over the internet with other musicians, each on their own rig and with their own monitor mix.</p>
-    <div class="act"><a class="appn" href="live/">JoVee <span>Live</span></a><span data-i18n="fam.soon" class="soon">Coming soon</span></div></div></div>
+    <a class="h-pill h-pill-dark" href="studio/" data-i18n="step.rig.more">See everything it does →</a>
+  </div></div>
+  <div class="photo"><img src="assets/photos/studio.webp" alt="" loading="lazy"></div>
+</section>
+
+<section class="h-dark" id="live"><div class="wrap">
+  <div class="h-panel rev" style="--c:var(--live)">
+    <div class="h-pane"><div class="h-copy">
+      <div class="h-lbl"><img src="assets/jovee-live-symbol.svg" alt="">JoVee Live</div>
+      <h2 data-i18n="step.live.h">Rehearse with your band, each at home.</h2>
+      <p data-i18n="fam.live">Play live over the internet with other musicians, each on their own rig and with their own monitor mix.</p>
+      <a class="h-pill h-pill-dark" href="live/" data-i18n="step.rig.more">See everything it does →</a>
+    </div></div>
+    <div class="scr"><img src="assets/apps/live.webp" alt="" loading="lazy"></div>
+  </div>
 </div></section>
 
 <footer class="foot"><div class="wrap"><span>© 2026 JoVee</span><a class="yt" href="https://www.youtube.com/@jovee.studio" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg><span data-i18n="foot.yt">Our YouTube channel</span></a>
-  <div class="langs" data-lang-switch><button type="button" data-lang="en">English</button><button type="button" data-lang="pt-BR">Português</button><button type="button" data-lang="es-ES">Español</button><button type="button" data-lang="fr-FR">Français</button><button type="button" data-lang="de-DE">Deutsch</button><button type="button" data-lang="ja-JP">日本語</button><button type="button" data-lang="ko-KR">한국어</button><button type="button" data-lang="zh-CN">中文</button><button type="button" data-lang="hi-IN">हिन्दी</button></div>
+  <select data-lang-select aria-label="Language"><option value="en">English</option><option value="pt-BR">Português</option><option value="es-ES">Español</option><option value="fr-FR">Français</option><option value="de-DE">Deutsch</option><option value="ja-JP">日本語</option><option value="ko-KR">한국어</option><option value="zh-CN">中文</option><option value="hi-IN">हिन्दी</option></select>
 </div></footer>
 </body>
 </html>
