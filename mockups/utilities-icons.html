@@ -14,6 +14,7 @@
   .it svg{width:96px;height:104px}
   .it b{display:block;font:500 18px/1.2 'Barlow';margin-top:10px}
   .it span{display:block;font-size:16px;color:#b9bec7}
+  #tab .it,#tab2 .it{width:120px}
   .sep{width:1px;align-self:stretch;background:#ffffff1f;margin:0 8px}
   .paper{background:#f4f1ea;color:#121418;border-radius:16px;padding:32px;margin-top:24px}
   .paper .it span{color:#3d424b}
@@ -33,6 +34,11 @@
 <div class="row" id="b"></div>
 <div class="paper"><div class="row" id="b2"></div></div>
 
+<h2>Tab &amp; lyrics — options</h2>
+<p>The tab and lyrics part of Jam, on its own: open a song file (like Guitar Pro), see and edit its tab and lyrics.</p>
+<div class="row" id="tab"></div>
+<div class="paper"><div class="row" id="tab2"></div></div>
+
 <h2>The family next to them (option A)</h2>
 <div class="row" id="fam"></div>
 
@@ -42,6 +48,8 @@ const GLYPH = {
   drums: `<path d="M29 40 V57 A21 7 0 0 0 71 57 V40 Z" fill="#000"/><ellipse cx="50" cy="40" rx="21" ry="7" fill="#000"/><ellipse cx="50" cy="40" rx="17" ry="4.2" fill="none" stroke="#fff" stroke-width="2.5"/><path d="M28 20 L46 35 M72 20 L54 35" stroke="#000" stroke-width="5" stroke-linecap="round"/>`,
   backing: `<g fill="#000"><rect x="24" y="27" width="40" height="8" rx="4"/><rect x="24" y="41" width="52" height="8" rx="4"/><rect x="24" y="55" width="32" height="8" rx="4"/></g><path d="M44 20 V70" stroke="#000" stroke-width="3.5" stroke-linecap="round"/><path d="M44 27 V35 M44 41 V49 M44 55 V63" stroke="#fff" stroke-width="3.5"/>`,
   metronome: `<path d="M38 72 L62 72 L56 24 L44 24 Z" fill="#000" stroke="#000" stroke-width="4" stroke-linejoin="round"/><path d="M50 64 L57 30" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/><circle cx="53.6" cy="46" r="4" fill="#fff"/><path d="M40 64 H60" stroke="#fff" stroke-width="2.5"/>`,
+  tabpage: `<rect x="30" y="20" width="40" height="54" rx="6" fill="#000"/><path d="M37 34 H63 M37 43 H63 M37 52 H63 M37 61 H55" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><rect x="42" y="30" width="7" height="8" rx="2" fill="#fff"/><rect x="54" y="48" width="7" height="8" rx="2" fill="#fff"/>`,
+  tabstaff: `<g transform="translate(0 5)"><path d="M22 30 H78 M22 41 H78 M22 52 H78 M22 63 H78" stroke="#000" stroke-width="3.5" stroke-linecap="round"/><g fill="#000"><rect x="30" y="35" width="11" height="12" rx="3"/><rect x="47" y="24" width="11" height="12" rx="3"/><rect x="62" y="46" width="11" height="12" rx="3"/></g><path d="M33 41 H38 M50 30 H55 M65 52 H70" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/></g>`,
   tuner: `<path d="M41 20 V42 A9 9 0 0 0 59 42 V20" fill="none" stroke="#000" stroke-width="6" stroke-linecap="round"/><path d="M50 51 V74" stroke="#000" stroke-width="6" stroke-linecap="round"/>`
 };
 const ITEMS = [
@@ -59,6 +67,8 @@ function put(el, shared){
   document.getElementById(el).innerHTML = ITEMS.map(([g,name,role,c]) =>
     `<div class="it">${icon(g, shared || c)}<b>${name}</b><span>${role} · free</span></div>`).join('');
 }
+const TABS=[['tabpage','1 · sheet','#4F5FD6'],['tabstaff','2 · tab lines','#4F5FD6'],['tabpage','1 · sheet','#F2785C'],['tabstaff','2 · tab lines','#F2785C']];
+for (const el of ['tab','tab2']) document.getElementById(el).innerHTML = TABS.map(([g,l,c])=>`<div class="it">${icon(g,c)}<b>JoVee Tab</b><span>${l}</span></div>`).join('') + '<div class="sep"></div>' + ITEMS.map(([g,name,role,c]) => `<div class="it">${icon(g,c)}<b>${name.replace('JoVee ','')}</b></div>`).join('');
 put('a'); put('a2'); put('b','#AEB6C2'); put('b2','#5B6573');
 const APPS = [['rig','Rig'],['studio','Studio'],['jam','Jam'],['tone','Tone'],['lut','Lut'],['live','Live'],['school','School']];
 document.getElementById('fam').innerHTML =

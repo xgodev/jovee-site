@@ -333,10 +333,11 @@
  "ap.rig.g10.i7": "Gemeinsame Einstellungen",
  "ap.rig.g10.i8": "Updates in der App",
  "util.h2": "Kostenlose Tools",
- "util.sub": "Vier kostenlose Apps zum Üben, jede für sich.",
+ "util.sub": "Fünf kostenlose Apps zum Üben, jede für sich.",
  "util.free": "Kostenlos",
  "util.drums": "75 Grooves in 15 Stilen zum Mitspielen.",
  "util.backing": "Backing Tracks mit Tempo, Tonart und A–B-Loop.",
  "util.metronome": "Metronom von 30 bis 300 BPM, mit Tap-Tempo.",
- "util.tuner": "Stimme jedes Instrument, das du anschließt."
+ "util.tuner": "Stimme jedes Instrument, das du anschließt.",
+ "util.tab": "Öffne eine Songdatei, etwa Guitar Pro, und sieh und bearbeite Tabs und Songtext."
 }

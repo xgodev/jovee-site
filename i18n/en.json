@@ -333,10 +333,11 @@
  "ap.rig.g10.i7": "Shared settings",
  "ap.rig.g10.i8": "In-app updates",
  "util.h2": "Free utilities",
- "util.sub": "Four free apps for practice, each on its own.",
+ "util.sub": "Five free apps for practice, each on its own.",
  "util.free": "Free",
  "util.drums": "75 grooves in 15 styles to play along with.",
  "util.backing": "Backing tracks with speed, key and an A–B loop.",
  "util.metronome": "Metronome from 30 to 300 BPM, with tap tempo.",
- "util.tuner": "Tune each instrument you plug in."
+ "util.tuner": "Tune each instrument you plug in.",
+ "util.tab": "Open a song file, like Guitar Pro, and see and edit its tab and lyrics."
 }

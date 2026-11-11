@@ -333,10 +333,11 @@
  "ap.rig.g10.i7": "共享设置",
  "ap.rig.g10.i8": "应用内更新",
  "util.h2": "免费工具",
- "util.sub": "四款免费练习应用，各自独立使用。",
+ "util.sub": "五款免费练习应用，各自独立使用。",
  "util.free": "免费",
  "util.drums": "15 种风格、75 个律动，跟着一起弹。",
  "util.backing": "可调速度、调性和 A–B 循环的伴奏音轨。",
  "util.metronome": "30–300 BPM 节拍器，支持 Tap 测速。",
- "util.tuner": "为你接入的每件乐器调音。"
+ "util.tuner": "为你接入的每件乐器调音。",
+ "util.tab": "打开歌曲文件（如 Guitar Pro），查看并编辑六线谱和歌词。"
 }
