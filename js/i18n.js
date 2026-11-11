@@ -37,8 +37,10 @@ export async function applyLang(lang) {
     if (v !== undefined) el.content = v;
   });
   document.querySelectorAll('[data-lang-switch] button').forEach(b => b.classList.toggle('on', b.dataset.lang === lang));
+  document.querySelectorAll('select[data-lang-select]').forEach(s => { s.value = lang; });
 }
 
 export function wireLangSwitch() {
   document.querySelectorAll('[data-lang-switch] button').forEach(b => b.addEventListener('click', () => applyLang(b.dataset.lang)));
+  document.querySelectorAll('select[data-lang-select]').forEach(s => s.addEventListener('change', () => applyLang(s.value)));
 }

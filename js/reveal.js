@@ -6,6 +6,8 @@ const BLOCKS = [
   ['.hw, .family .app, .list > div, .gal figure', 'up', true],
   ['.step:nth-child(odd) .ph, .fg:not(.fg-rev):not(.fg-txt) > figure', 'left', false],
   ['.step:nth-child(even) .ph, .fg-rev > figure', 'right', false],
+  ['.h-copy, .h-fam h2, .h-fam .h-lead, .h-panel .scr, .h-ed .fig', 'up', false],
+  ['.h-tile', 'up', true],
 ];
 const STAGGER_MS = 80;
 
