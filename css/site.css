@@ -338,3 +338,5 @@ a.app{color:inherit;transition:box-shadow .2s}
 .lang-m button:hover,.lang-m button.on{background:#ffffff12;color:#f4f1ea}
 .lang summary:focus-visible,.lang-m button:focus-visible{outline:3px solid currentColor;outline-offset:2px}
 @media (max-width:860px){.lang summary span{display:none}.lang summary{padding:10px}}
+.nav .nav-free{display:inline-flex;align-items:center;gap:8px;padding-left:24px;border-left:1px solid var(--line-2)}
+.nav .tag-free{font:600 12px/1 var(--f);letter-spacing:.08em;text-transform:uppercase;padding:5px 8px;border-radius:999px;background:#2fbf71;color:#06140c}
