@@ -103,7 +103,7 @@ body.home{
 .h-utils{background:var(--paper);color:var(--ink-d);padding:112px 0}
 .h-utils h2{margin:0 0 20px;font:300 54px/1.1 var(--fb);letter-spacing:-.02em}
 .h-utils .h-lead{margin:0 0 48px;color:var(--ink-d2);max-width:34em}
-.h-ugrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
+.h-ugrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
 .h-util{background:#fff;border-radius:16px;padding:28px 20px;border-top:6px solid var(--c);display:flex;flex-direction:column;gap:12px}
 .h-util img{width:56px;height:60px}
 .h-util b{font:500 20px/1.2 var(--fb);white-space:nowrap}
