@@ -19,7 +19,7 @@
 
 <header class="top"><div class="wrap">
   <a class="brand" href="./"><img src="assets/jovee-symbol-cream.svg" alt="">JoVee</a>
-  <nav class="nav"><a href="rig/">Rig</a><a href="studio/">Studio</a><a href="jam/" class="on">Jam</a><a href="tone/">Tone</a><a href="lut/">Lut</a><a href="live/">Live</a><a href="school/">School</a><a href="#utilities" class="nav-free"><span data-i18n="nav.utils">Utilities</span><span class="tag-free" data-i18n="util.free">Free</span></a></nav>
+  <nav class="nav"><a href="rig/">Rig</a><a href="studio/">Studio</a><a href="jam/" class="on">Jam</a><a href="tone/">Tone</a><a href="lut/">Lut</a><a href="live/">Live</a><a href="school/">School</a><a href="utilities/" class="nav-free"><span data-i18n="nav.utils">Utilities</span><span class="tag-free" data-i18n="util.free">Free</span></a></nav>
   <details class="lang" data-lang-switch><summary aria-label="Language"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><span data-lang-cur>English</span></summary><div class="lang-m"><button type="button" data-lang="en">English</button><button type="button" data-lang="pt-BR">Português</button><button type="button" data-lang="es-ES">Español</button><button type="button" data-lang="fr-FR">Français</button><button type="button" data-lang="de-DE">Deutsch</button><button type="button" data-lang="ja-JP">日本語</button><button type="button" data-lang="ko-KR">한국어</button><button type="button" data-lang="zh-CN">中文</button><button type="button" data-lang="hi-IN">हिन्दी</button></div></details>
 </div></header>
 
@@ -47,15 +47,65 @@
 <section class="sec" id="features" style="--c:var(--jam)"><div class="wrap">
   <div data-i18n="ap.what" class="kick">What it does</div>
   <h2 data-i18n="ap.jam.f.h2" class="h2">Everything you need to play a whole song.</h2>
-  <div class="bigshot"><video src="assets/loops/jam-stems.mp4" poster="assets/loops/jam-stems.jpg" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video></div>
-  <div class="gal"><figure><video src="assets/loops/jam-tab.mp4" poster="assets/loops/jam-tab.jpg" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video></figure><figure><video src="assets/loops/jam-lyrics.mp4" poster="assets/loops/jam-lyrics.jpg" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video></figure></div>
-  <div class="list">
-    <div><b><span data-i18n="ap.jam.f1.t">Scrolling tab</span></b><p data-i18n="ap.jam.f1.p">Imported, or generated from the separated guitar, and refretted for your tuning.</p></div>
-    <div><b><span data-i18n="ap.jam.f2.t">Synced lyrics</span></b><p data-i18n="ap.jam.f2.p">Lyrics with chords, the line being sung lit up.</p></div>
-    <div><b><span data-i18n="ap.jam.f3.t">Tone per song</span></b><p data-i18n="ap.jam.f3.p">Your Rig tone changes by itself at the points of the song you mark.</p></div>
-    <div><b><span data-i18n="ap.jam.f4.t">Markers</span></b><p data-i18n="ap.jam.f4.p">A count-in before you come in and each section’s name spoken on time.</p></div>
-    <div><b><span data-i18n="ap.jam.f5.t">Edit tab and lyrics</span></b><p data-i18n="ap.jam.f5.p">Fix notes, chords and lyric lines by hand.</p></div>
-    <div><b><span data-i18n="ap.jam.f6.t">Song library</span></b><p data-i18n="ap.jam.f6.p">Filter your songs by artist and by the tracks already split.</p></div>
+  <div class="fgs">
+    <div class="fg">
+      <figure><video src="assets/loops/jam-stems.mp4" poster="assets/loops/jam-stems.jpg" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video></figure>
+      <div class="fg-b"><span class="hn">01</span><h3 data-i18n="ap.jam.g1.t">Songs and stems</h3>
+        <ul>
+          <li data-i18n="ap.jam.g1.i1">Search for the song inside the app or bring your files</li>
+          <li data-i18n="ap.jam.g1.i2">Drums, bass, vocals, guitar, piano and the rest</li>
+          <li data-i18n="ap.jam.g1.i3">Split on your computer with built-in models, or online with your MVSEP account</li>
+          <li data-i18n="ap.jam.g1.i4">Separation passes saved as a preset</li>
+          <li data-i18n="ap.jam.g1.i5">Stereo split finds each guitar by its place</li>
+          <li data-i18n="ap.jam.g1.i6">Auto mode</li>
+          <li data-i18n="ap.jam.g1.i7">Filter by artist and by stem; download the stems</li>
+          <li data-i18n="ap.jam.g1.i8">On its own or inside Rig and Studio</li>
+        </ul></div>
+    </div>
+    <div class="fg fg-rev">
+      <figure class="duo"><img src="assets/photos/jam.webp" alt="" loading="lazy"><img class="si" src="assets/shots/win-jam.webp" alt="" loading="lazy"></figure>
+      <div class="fg-b"><span class="hn">02</span><h3 data-i18n="ap.jam.g2.t">Playback and mix</h3>
+        <ul>
+          <li data-i18n="ap.jam.g2.i1">Level, pan, mute and solo per stem</li>
+          <li data-i18n="ap.jam.g2.i2">Plays on several outputs at once</li>
+          <li data-i18n="ap.jam.g2.i3">Speed, semitones and A–B loop</li>
+          <li data-i18n="ap.jam.g2.i4">Finds the tempo; its knob sets the project BPM</li>
+          <li data-i18n="ap.jam.g2.i5">Share a song by file</li>
+        </ul></div>
+    </div>
+    <div class="fg fg-txt">
+      <div class="fg-b"><span class="hn">03</span><h3 data-i18n="ap.jam.g3.t">Tone and markers</h3>
+        <ul>
+          <li data-i18n="ap.jam.g3.i1">Each song keeps its own chains and presets</li>
+          <li data-i18n="ap.jam.g3.i2">Tone points switch chains and mute stems</li>
+          <li data-i18n="ap.jam.g3.i3">Count-in, spoken section names, tone change and MIDI</li>
+          <li data-i18n="ap.jam.g3.i4">Several named marker sets</li>
+          <li data-i18n="ap.jam.g3.i5">Tab sections become markers</li>
+          <li data-i18n="ap.jam.g3.i6">Alerts on their own output, out of the mix</li>
+        </ul></div>
+    </div>
+    <div class="fg fg-rev">
+      <figure><video src="assets/loops/jam-tab.mp4" poster="assets/loops/jam-tab.jpg" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video></figure>
+      <div class="fg-b"><span class="hn">04</span><h3 data-i18n="ap.jam.g4.t">Tab</h3>
+        <ul>
+          <li data-i18n="ap.jam.g4.i1">A tab file, or one generated from the guitar stem</li>
+          <li data-i18n="ap.jam.g4.i2">Refretted for your tuning</li>
+          <li data-i18n="ap.jam.g4.i3">Several tab windows, one per track</li>
+          <li data-i18n="ap.jam.g4.i4">Each note marked on time, late, wrong or missed</li>
+          <li data-i18n="ap.jam.g4.i5">Fix notes by hand, with undo and redo</li>
+        </ul></div>
+    </div>
+    <div class="fg">
+      <figure><video src="assets/loops/jam-lyrics.mp4" poster="assets/loops/jam-lyrics.jpg" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video></figure>
+      <div class="fg-b"><span class="hn">05</span><h3 data-i18n="ap.jam.g5.t">Lyrics and chords</h3>
+        <ul>
+          <li data-i18n="ap.jam.g5.i1">Synced lyrics from the tab file, an online library or heard in the vocals</li>
+          <li data-i18n="ap.jam.g5.i2">Chords over the lyrics, or hidden</li>
+          <li data-i18n="ap.jam.g5.i3">Text size you choose</li>
+          <li data-i18n="ap.jam.g5.i4">Chord shapes strip</li>
+          <li data-i18n="ap.jam.g5.i5">Fix lyric lines by hand</li>
+        </ul></div>
+    </div>
   </div>
 </div></section>
 

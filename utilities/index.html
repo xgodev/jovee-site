@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<base href="../">
+<title data-i18n="meta.title">JoVee — everything you and your band need</title>
+<meta name="description" data-i18n-content="meta.desc" content="Amps, pedals, TONE3000, stems, tab and looper in one app for guitar, bass and vocals.">
+<link rel="icon" href="assets/jovee-symbol.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;900&family=Barlow:wght@200;300;400;500;600;700&family=Bebas+Neue&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/app.css">
+<script type="module" src="js/main.js"></script>
+<script type="module" src="js/more.js"></script>
+</head>
+<body class="app-page p-util side-l">
+
+<header class="top"><div class="wrap">
+  <a class="brand" href="./"><img src="assets/jovee-symbol-cream.svg" alt="">JoVee</a>
+  <nav class="nav"><a href="rig/">Rig</a><a href="studio/">Studio</a><a href="jam/">Jam</a><a href="tone/">Tone</a><a href="lut/">Lut</a><a href="live/">Live</a><a href="school/">School</a><a href="utilities/" class="nav-free on"><span data-i18n="nav.utils">Utilities</span><span class="tag-free" data-i18n="util.free">Free</span></a></nav>
+  <details class="lang" data-lang-switch><summary aria-label="Language"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><span data-lang-cur>English</span></summary><div class="lang-m"><button type="button" data-lang="en">English</button><button type="button" data-lang="pt-BR">Português</button><button type="button" data-lang="es-ES">Español</button><button type="button" data-lang="fr-FR">Français</button><button type="button" data-lang="de-DE">Deutsch</button><button type="button" data-lang="ja-JP">日本語</button><button type="button" data-lang="ko-KR">한국어</button><button type="button" data-lang="zh-CN">中文</button><button type="button" data-lang="hi-IN">हिन्दी</button></div></details>
+</div></header>
+
+<section class="hero hero-app" style="--c:#2fbf71"><div class="wrap solo">
+  <div>
+    <div class="eyebrow"><span data-i18n="nav.utils">Utilities</span> <span class="tag-free" data-i18n="util.free">Free</span></div>
+    <h1 data-i18n="util.h2" class="h1-app">Free utilities</h1>
+    <p data-i18n="util.sub" class="lede">Five free apps for practice, each on its own.</p>
+  </div>
+</div></section>
+
+<section class="sec" id="features"><div class="wrap">
+  <div class="fgs">
+    <div class="fg" id="drums" style="--c:var(--drums)">
+      <figure><video src="assets/loops/rig-drums.mp4" poster="assets/loops/rig-drums.jpg" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video></figure>
+      <div class="fg-b"><img class="ut-ic" src="assets/jovee-drums-symbol.svg" alt=""><h3>JoVee Drums</h3>
+        <ul>
+          <li data-i18n="ut.drums.i1">Sampled kits</li>
+          <li data-i18n="ut.drums.i2">75 grooves in 15 styles</li>
+          <li data-i18n="ut.drums.i3">A fill when you ask</li>
+          <li data-i18n="ut.drums.i4">A tone per groove</li>
+          <li data-i18n="ut.out">Volume and one or more outputs</li>
+          <li data-i18n="ut.drums.i6">Import and export kits and grooves</li>
+          <li data-i18n="ut.drums.i7">From the top bar or the compact view</li>
+        </ul></div>
+    </div>
+    <div class="fg fg-rev" id="backing" style="--c:var(--backing)">
+      <figure><img src="assets/shots/player.webp" alt="" loading="lazy"></figure>
+      <div class="fg-b"><img class="ut-ic" src="assets/jovee-backing-symbol.svg" alt=""><h3>JoVee Backing</h3>
+        <ul>
+          <li data-i18n="ut.backing.i1">Rock, blues and funk tracks in several keys</li>
+          <li data-i18n="ut.backing.i2">Split by part: solo, rhythm, bass, acoustic</li>
+          <li data-i18n="ut.backing.i3">Your own files too</li>
+          <li data-i18n="ut.backing.i4">Speed 0.5× to 2× with the pitch kept</li>
+          <li data-i18n="ut.backing.i5">±12 semitones and A–B loop</li>
+          <li data-i18n="ut.backing.i6">A tone per track</li>
+          <li data-i18n="ut.backing.i7">Share a track by file</li>
+          <li data-i18n="ut.out">Volume and one or more outputs</li>
+        </ul></div>
+    </div>
+    <div class="fg" id="metronome" style="--c:var(--metronome)">
+      <figure><img src="assets/shots/metronome.webp" alt="" loading="lazy"></figure>
+      <div class="fg-b"><img class="ut-ic" src="assets/jovee-metronome-symbol.svg" alt=""><h3>JoVee Metronome</h3>
+        <ul>
+          <li data-i18n="ut.metronome.i1">30 to 300 BPM, with tap</li>
+          <li data-i18n="ut.metronome.i2">Time signature and accent</li>
+          <li data-i18n="ut.metronome.i3">Eighths, triplets and sixteenths</li>
+          <li data-i18n="ut.metronome.i4">Count-in</li>
+          <li data-i18n="ut.metronome.i5">Click, Wood or Beep sound</li>
+          <li data-i18n="ut.out">Volume and one or more outputs</li>
+          <li data-i18n="ut.metronome.i7">Drives synced delays and modulations</li>
+          <li data-i18n="ut.metronome.i8">Each preset can carry its BPM</li>
+        </ul></div>
+    </div>
+    <div class="fg fg-rev" id="tuner" style="--c:var(--tuner)">
+      <figure class="duo"><img src="assets/photos/rig-tuner.webp" alt="" loading="lazy"><img class="si" src="assets/shots/tuner.webp" alt="" loading="lazy"></figure>
+      <div class="fg-b"><img class="ut-ic" src="assets/jovee-tuner-symbol.svg" alt=""><h3>JoVee Tuner</h3>
+        <ul>
+          <li data-i18n="ut.tuner.i1">One tuner per input</li>
+          <li data-i18n="ut.tuner.i2">As a block anywhere in the chain</li>
+          <li data-i18n="ut.tuner.i3">Or in its own window</li>
+          <li data-i18n="ut.tuner.i4">Opens from Rig, Jam and Studio</li>
+        </ul></div>
+    </div>
+    <div class="fg" id="tab" style="--c:var(--tab)">
+      <figure><img src="assets/shots/win-tab.webp" alt="" loading="lazy"></figure>
+      <div class="fg-b"><img class="ut-ic" src="assets/jovee-tab-symbol.svg" alt=""><h3>JoVee Tab</h3>
+        <ul>
+          <li data-i18n="ut.tab.i1">Opens .gp, .gpx, .gp5, .gp4, .gp3 and .gtp</li>
+          <li data-i18n="ut.tab.i2">Tab and lyrics, track by track</li>
+          <li data-i18n="ut.tab.i3">Hear the tab</li>
+          <li data-i18n="ut.tab.i4">Edit fret, string, length and bend</li>
+          <li data-i18n="ut.tab.i5">Add or delete notes, rename chords</li>
+          <li data-i18n="ut.tab.i6">Edit lyric lines and their timing</li>
+          <li data-i18n="ut.tab.i7">Undo and redo</li>
+          <li data-i18n="ut.tab.i8">Chord shapes</li>
+        </ul></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec" id="apps"><div class="wrap">
+  <h2 data-i18n="fam.h2" class="h2">The JoVee family</h2>
+  <div class="family">
+    <a class="app" href="rig/" style="--c:var(--rig)"><figure><img src="assets/shots/chains.webp" alt="" loading="lazy"></figure><div class="app-body"><img class="pk" src="assets/jovee-rig-symbol.svg" alt=""><b>JoVee <span>Rig</span></b><p data-i18n="fam.rig">Build each instrument's rig with amps, cabs and pedals, in any order you want.</p><span data-i18n="fam.soon" class="soon">Coming soon</span></div></a>
+    <a class="app" href="studio/" style="--c:var(--studio)"><figure><img src="assets/apps/studio.webp" alt="" loading="lazy"></figure><div class="app-body"><img class="pk" src="assets/jovee-studio-symbol.svg" alt=""><b>JoVee <span>Studio</span></b><p data-i18n="fam.studio">Record, edit, mix and finish songs across multiple tracks, with Rig inside.</p><span data-i18n="fam.soon" class="soon">Coming soon</span></div></a>
+    <a class="app" href="tone/" style="--c:var(--tone)"><figure><img src="assets/apps/tone.webp" alt="" loading="lazy"></figure><div class="app-body"><img class="pk" src="assets/jovee-tone-symbol.svg" alt=""><b>JoVee <span>Tone</span></b><p data-i18n="fam.tone">Recreates a recording's tone by measuring it and sets it up on Rig.</p><span data-i18n="fam.soon" class="soon">Coming soon</span></div></a>
+    <a class="app" href="lut/" style="--c:var(--lut)"><figure><img src="assets/apps/lut.webp" alt="" loading="lazy"></figure><div class="app-body"><img class="pk" src="assets/jovee-lut-symbol.svg" alt=""><b>JoVee <span>Lut</span></b><p data-i18n="fam.lut">Guides your guitar setup step by step, measuring each string by its sound.</p><span data-i18n="fam.soon" class="soon">Coming soon</span></div></a>
+    <a class="app" href="live/" style="--c:var(--live)"><figure><img src="assets/apps/live.webp" alt="" loading="lazy"></figure><div class="app-body"><img class="pk" src="assets/jovee-live-symbol.svg" alt=""><b>JoVee <span>Live</span></b><p data-i18n="fam.live">Play live over the internet with other musicians, each on their own rig and with their own monitor mix.</p><span data-i18n="fam.soon" class="soon">Coming soon</span></div></a>
+    <a class="app" href="school/" style="--c:var(--school)"><figure><img src="assets/apps/school.webp" alt="" loading="lazy"></figure><div class="app-body"><img class="pk" src="assets/jovee-school-symbol.svg" alt=""><b>JoVee <span>School</span></b><p data-i18n="fam.school">An electric guitar course from zero to advanced in rock, blues and metal, that listens to you play to measure your progress.</p><span data-i18n="fam.soon" class="soon">Coming soon</span></div></a>
+  </div>
+</div></section>
+
+<footer class="foot"><div class="wrap"><span>© 2026 JoVee</span><a class="yt" href="https://www.youtube.com/@jovee.studio" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg><span data-i18n="foot.yt">Our YouTube channel</span></a>
+</div></footer>
+</body>
+</html>
